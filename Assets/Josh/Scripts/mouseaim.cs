@@ -6,6 +6,7 @@ public class mouseaim : MonoBehaviour
 {
     // Variables
     public Transform player;
+    
     public float mouseSensitivity = 2f;
     float cameraVerticalRotation = 0f;
 
@@ -38,6 +39,7 @@ public class mouseaim : MonoBehaviour
         // Rotate the Player Object and the Camera around its Y axis
 
         player.Rotate(Vector3.up * inputX);
+        
     }
 }
 

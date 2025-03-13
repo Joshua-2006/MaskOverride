@@ -38,11 +38,12 @@ public class Movement : MonoBehaviour
         if(Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.AddRelativeForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            isGrounded = false;
         }
     }
     private void OnCollisionEnter(Collision collision)
     {
-       if(collision.gameObject.CompareTag("Grounded"))
+        if (collision.gameObject.CompareTag("Grounded"))
         {
             isGrounded = true;
         }
