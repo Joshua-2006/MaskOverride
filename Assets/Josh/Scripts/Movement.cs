@@ -26,6 +26,11 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetButtonDown("Jump") && isGrounded)
+        {
+            rb.AddRelativeForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            isGrounded = false;
+        }
 
     }
     private void FixedUpdate()
@@ -35,11 +40,7 @@ public class Movement : MonoBehaviour
         
         rb.AddRelativeForce(Vector3.right * horizontal * speed * drag, ForceMode.Impulse);
         rb.AddRelativeForce(Vector3.forward * vertical * speed * drag, ForceMode.Impulse);
-        if(Input.GetButtonDown("Jump") && isGrounded)
-        {
-            rb.AddRelativeForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            isGrounded = false;
-        }
+        
     }
     private void OnCollisionEnter(Collision collision)
     {
