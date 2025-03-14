@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
     public float speed;
     private Rigidbody enemyRb;
     private GameObject player;
+    public float explosionPower;
     
     // Start is called before the first frame update
     void Start()
@@ -19,5 +20,12 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         enemyRb.AddForce((player.transform.position - transform.position).normalized * speed);
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Player"))
+        {
+            enemyRb.AddForce(player.transform.forward * explosionPower, ForceMode.Impulse);
+        }
     }
 }
