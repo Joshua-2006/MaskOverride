@@ -6,12 +6,12 @@ public class Pickup : MonoBehaviour
 {
     public bool canPickup;
     public GameObject attach;
-    public GameObject player;
+    public Movement player;
     public bool canShoot;
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = FindAnyObjectByType<Movement>();
     }
 
     // Update is called once per frame
@@ -20,7 +20,9 @@ public class Pickup : MonoBehaviour
         if(transform.position == attach.transform.position)
         {
             transform.rotation = player.transform.rotation;
-        }    
+            transform.Rotate(0, 0, player.transform.rotation.z);
+        }
+        
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -30,7 +32,7 @@ public class Pickup : MonoBehaviour
         }
         if(canPickup && Input.GetButton("Interact"))
         {
-            transform.SetParent(player.transform, true);
+            transform.SetParent(player.cam.transform, true);
             transform.position = attach.transform.position;
         }
     }
@@ -47,7 +49,7 @@ public class Pickup : MonoBehaviour
         {
             transform.position = attach.transform.position;
             transform.rotation = attach.transform.rotation;
-            transform.SetParent(player.transform, true);
+            transform.SetParent(player.cam.transform, true);
             canShoot = true;
         }
     }
