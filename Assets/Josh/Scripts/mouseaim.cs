@@ -6,7 +6,7 @@ public class mouseaim : MonoBehaviour
 {
     // Variables
     public Transform player;
-    
+
     public float mouseSensitivity = 2f;
     float cameraVerticalRotation = 0f;
 
@@ -18,7 +18,7 @@ public class mouseaim : MonoBehaviour
         // Lock and Hide the Cursor
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-
+        
     }
 
 
@@ -38,8 +38,7 @@ public class mouseaim : MonoBehaviour
 
         // Rotate the Player Object and the Camera around its Y axis
 
-        player.Rotate(Vector3.up * inputX);
-        
+        player.transform.Rotate(Vector3.up * inputX);
     }
 }
 
