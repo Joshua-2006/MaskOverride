@@ -7,6 +7,7 @@ public class Pickup : MonoBehaviour
     public bool canPickup;
     public GameObject attach;
     public GameObject player;
+    public bool canShoot;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +48,7 @@ public class Pickup : MonoBehaviour
             transform.position = attach.transform.position;
             transform.rotation = attach.transform.rotation;
             transform.SetParent(player.transform, true);
+            canShoot = true;
         }
     }
 }
