@@ -8,6 +8,8 @@ public class Pickup : MonoBehaviour
     public GameObject attach;
     public Movement player;
     public bool canShoot;
+    public GameObject uiElement;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +30,7 @@ public class Pickup : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
+            uiElement.SetActive(true);
             canPickup = true;
         }
         if(canPickup && Input.GetButton("Interact"))
@@ -47,6 +50,7 @@ public class Pickup : MonoBehaviour
     {
         if(canPickup && Input.GetButton("Interact"))
         {
+            
             transform.position = attach.transform.position;
             transform.rotation = attach.transform.rotation;
             transform.SetParent(player.cam.transform, true);

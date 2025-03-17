@@ -6,21 +6,31 @@ public class Bullet : MonoBehaviour
 {
     public float speed;
     public Rigidbody rb;
-    private Gun gun;
+    private Movement gun;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        gun = FindAnyObjectByType<Gun>();
+        gun = FindAnyObjectByType<Movement>();
     }
 
     // Update is called once per frame
     void Update()
     {
-       // Destroy(gameObject, 1);
+        Destroy(gameObject, 1);
+        
     }
     private void FixedUpdate()
     {
-        transform.Translate(gun.transform.forward * Time.deltaTime * speed);
+        rb.AddRelativeForce(gun.transform.forward * speed);
+
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(gameObject);
+            Destroy(collision.gameObject);
+        }
     }
 }
