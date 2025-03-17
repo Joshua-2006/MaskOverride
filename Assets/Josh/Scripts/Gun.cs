@@ -12,7 +12,7 @@ public class Gun : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ammo = 10;
+        ammo = 1000;
     }
 
     // Update is called once per frame
