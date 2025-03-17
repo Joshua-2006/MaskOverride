@@ -7,6 +7,9 @@ public class GameManager : MonoBehaviour
 {
     public int ammo;
     public int health;
+    public int healthAmount;
+    public TextMeshProUGUI healthText;
+    public TextMeshProUGUI ammoText;
 
     // Start is called before the first frame update
     void Start()
@@ -19,4 +22,15 @@ public class GameManager : MonoBehaviour
     {
         
     }
+    public void UpdateHealth()
+    {
+        health = healthAmount;
+        healthText.text = $"Health: {health}";
+    }
+    public void Reload()
+    {
+        ammo = 10;
+        ammoText.text = $"Ammo: {ammo}";
+    }
+    
 }
