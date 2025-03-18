@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        ammo = 10;
     }
 
     // Update is called once per frame
@@ -24,12 +24,10 @@ public class GameManager : MonoBehaviour
     public void UpdateHealth(int healthAmount)
     {
         health = healthAmount;
-        healthText.text = $"Health: {health}";
     }
     public void Reload(int ammoAmount)
     {
         ammo = ammoAmount;
-        ammoText.text = $"Ammo: {ammo}";
     }
     
 }

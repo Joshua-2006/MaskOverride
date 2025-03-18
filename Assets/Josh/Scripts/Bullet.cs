@@ -10,5 +10,19 @@ public class Bullet : MonoBehaviour
     {
         Destroy(gameObject, lifetime); 
     }
-
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(gameObject);
+        }
+        if(collision.gameObject.CompareTag("Grounded"))
+        {
+            Destroy(gameObject);    
+        }
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            Destroy(gameObject);
+        }
+    }
 }

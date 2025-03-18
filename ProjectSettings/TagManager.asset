@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Grounded
   - Enemy
+  - Bullet
   layers:
   - Default
   - TransparentFX
