@@ -7,7 +7,6 @@ public class GameManager : MonoBehaviour
 {
     public int ammo;
     public int health;
-    public int healthAmount;
     public TextMeshProUGUI healthText;
     public TextMeshProUGUI ammoText;
 
@@ -22,14 +21,14 @@ public class GameManager : MonoBehaviour
     {
         
     }
-    public void UpdateHealth()
+    public void UpdateHealth(int healthAmount)
     {
         health = healthAmount;
         healthText.text = $"Health: {health}";
     }
-    public void Reload()
+    public void Reload(int ammoAmount)
     {
-        ammo = 10;
+        ammo = ammoAmount;
         ammoText.text = $"Ammo: {ammo}";
     }
     
