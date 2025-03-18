@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
-    public GameObject bullet;
-    public GameObject spawn;
+    public GameObject bulletPrefab;
+    public Transform firePoint;
+    public float bulletSpeed = 20f;
     public Pickup gun;
     public float ammo;
     
@@ -20,13 +21,21 @@ public class Gun : MonoBehaviour
     {
         if (gun.canShoot)
         {
-            if(Input.GetKeyDown(KeyCode.Mouse0) && ammo != 0)
+            if (Input.GetButtonDown("Fire1"))
             {
-                Instantiate(bullet, spawn.transform.position, bullet.transform.rotation);
-                ammo -= 1;
+                Fire();
             }
         }
     }
-  
+   public void Fire()  
+    {
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+
+        Rigidbody rb = bullet.GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.velocity = firePoint.forward * bulletSpeed;
+        }
+    }
 
 }
