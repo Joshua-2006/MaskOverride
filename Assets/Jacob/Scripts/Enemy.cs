@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
     public GameManager gm;
     
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
         enemyRb = GetComponent<Rigidbody>();
         player = GameObject.Find("Player");

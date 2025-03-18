@@ -9,6 +9,7 @@ public class Pickup : MonoBehaviour
     public Movement player;
     public bool canShoot;
     public Pickup gun;
+   
     
     // Start is called before the first frame update
     void Start()
