@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Josh/Scenes/tutorial.unity
     guid: 394835061f4d24a41abd59e4f97f22a3
+  - enabled: 1
+    path: Assets/Josh/Scenes/hub.unity
+    guid: 6f40502c0120edc49a927b894ffb40fe
   m_configObjects: {}
