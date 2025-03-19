@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using UnityEngine.SceneManagement;
 
 public class Movement : MonoBehaviour
 {
@@ -16,11 +17,15 @@ public class Movement : MonoBehaviour
     [Header("Camera")]
     public GameObject target;
     public Camera cam;
+    [Header("Health")]
+    public GameManager gm;
+    
     
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        gm = FindAnyObjectByType<GameManager>();
     }
 
     // Update is called once per frame
@@ -31,7 +36,10 @@ public class Movement : MonoBehaviour
             rb.AddRelativeForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isGrounded = false;
         }
-
+        if(gm.health <= 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);            
+        }
     }
     private void FixedUpdate()
     {

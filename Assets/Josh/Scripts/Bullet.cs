@@ -4,23 +4,25 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float speed;
-    public Rigidbody rb;
-    private Gun gun;
-    // Start is called before the first frame update
+    public float lifetime = 5f;
+
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
-        gun = FindAnyObjectByType<Gun>();
+        Destroy(gameObject, lifetime); 
     }
-
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter(Collision collision)
     {
-       // Destroy(gameObject, 1);
-    }
-    private void FixedUpdate()
-    {
-        transform.Translate(gun.transform.forward * Time.deltaTime * speed);
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(gameObject);
+        }
+        if(collision.gameObject.CompareTag("Grounded"))
+        {
+            Destroy(gameObject);    
+        }
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            Destroy(gameObject);
+        }
     }
 }
