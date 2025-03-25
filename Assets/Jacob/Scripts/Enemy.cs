@@ -11,6 +11,9 @@ public class Enemy : MonoBehaviour
     public int health;
     public bool p;
     public GameManager gm;
+    public bool isInRange;
+    public float range;
+    public float setSpeed;
     
     // Start is called before the first frame update
     protected virtual void Start()
@@ -28,6 +31,24 @@ public class Enemy : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        var distance = Vector3.Distance(transform.position, player.transform.position);
+        if (distance < range)
+        {
+            isInRange = true;
+        }
+        if (distance > range)
+        {
+            isInRange = false;
+        }
+        if (isInRange == true)
+        {
+            speed = setSpeed;
+        }
+        else
+        {
+            speed = 0;
+        }
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -40,5 +61,7 @@ public class Enemy : MonoBehaviour
         {
             health -= 3;
         }
+
+        
     }
 }
