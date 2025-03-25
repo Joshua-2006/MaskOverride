@@ -17,6 +17,7 @@ public class Movement : MonoBehaviour
     [Header("Camera")]
     public GameObject target;
     public Camera cam;
+    public bool isTurnedAround;
     [Header("Health")]
     public GameManager gm;
     
