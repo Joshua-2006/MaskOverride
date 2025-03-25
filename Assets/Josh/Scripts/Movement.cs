@@ -18,6 +18,8 @@ public class Movement : MonoBehaviour
     public GameObject target;
     public Camera cam;
     public bool isTurnedAround;
+    public float raycastDistance = 10f;
+    public LayerMask interactableLayer;
     [Header("Health")]
     public GameManager gm;
     
@@ -37,11 +39,30 @@ public class Movement : MonoBehaviour
             rb.AddRelativeForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isGrounded = false;
         }
-        if(gm.health <= 0)
+        if (gm.health <= 0)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);            
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit, raycastDistance, interactableLayer))
+        {
+            // Raycast hit an object
+            // Get the object that was hit
+            GameObject hitObject = hit.collider.gameObject;
+
+            if (hitObject.name == "Cube (2)")
+            {
+                isTurnedAround = true;
+            }
+            else if (hitObject.name == "Canvas (4)")
+            {
+                isTurnedAround = true;
+            }
+
         }
     }
+
     private void FixedUpdate()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
