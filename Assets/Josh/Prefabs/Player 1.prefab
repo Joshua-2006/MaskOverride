@@ -1016,6 +1016,11 @@ MonoBehaviour:
   isGrounded: 0
   target: {fileID: 4586559839411017069}
   cam: {fileID: 4586559839673587436}
+  isTurnedAround: 0
+  raycastDistance: 10
+  interactableLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
   gm: {fileID: 0}
 --- !u!1 &4862565869863979256
 GameObject:
@@ -1481,3 +1486,4 @@ MonoBehaviour:
   gm: {fileID: 0}
   ammo: 10
   reload: 0
+  reserves: 0
