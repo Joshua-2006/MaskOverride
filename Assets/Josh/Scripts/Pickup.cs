@@ -46,5 +46,6 @@ public class Pickup : MonoBehaviour
             gun.gameObject.SetActive(true);
             
         }
+        
     }
 }
