@@ -10,6 +10,7 @@ public class Ammo : MonoBehaviour
     public void Start()
     {
         gm = FindAnyObjectByType<GameManager>();
+        
     }
     public void Update()
     {
