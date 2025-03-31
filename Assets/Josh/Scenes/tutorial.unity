@@ -7004,6 +7004,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7805278440461459765, guid: 51c26a44ee94c154a992c8efaa476d28,
+        type: 3}
+      propertyPath: jumpForce
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7805278440461459766, guid: 51c26a44ee94c154a992c8efaa476d28,
+        type: 3}
+      propertyPath: m_Drag
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7805278440461459771, guid: 51c26a44ee94c154a992c8efaa476d28,
         type: 3}
       propertyPath: m_Name
