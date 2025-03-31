@@ -14,6 +14,7 @@ public class Ammo : MonoBehaviour
     }
     public void Update()
     {
+        gun = FindAnyObjectByType<Gun>();
     }
     private void OnTriggerStay(Collider other)
     {
