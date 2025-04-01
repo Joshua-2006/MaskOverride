@@ -39,6 +39,10 @@ public class Movement : MonoBehaviour
             rb.AddRelativeForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isGrounded = false;
         }
+       /* if (isGrounded == false)
+            rb.mass = 50;
+        if (isGrounded)
+            rb.mass = 2;*/
         if (gm.health <= 0)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
