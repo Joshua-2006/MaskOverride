@@ -6,6 +6,7 @@ public class Ammo : MonoBehaviour
 {
     public Gun gun;
     public GameManager gm;
+    public GameObject interact;
     // Start is called before the first frame update
     public void Start()
     {
@@ -16,6 +17,11 @@ public class Ammo : MonoBehaviour
     {
         gun = FindAnyObjectByType<Gun>();
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Player"))
+        interact.SetActive(true);
+    }
     private void OnTriggerStay(Collider other)
     {
         if(Input.GetButton("Interact"))
@@ -23,6 +29,12 @@ public class Ammo : MonoBehaviour
             gun.reserves += 1;
             gm.UpdateReserves();
             gameObject.SetActive(false);
+            interact.SetActive(false);
         }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+            interact.SetActive(false);
     }
 }

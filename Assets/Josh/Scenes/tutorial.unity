@@ -3250,7 +3250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7fb8d81f08328a4290d18fdbe22054d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 1657528576}
 --- !u!65 &964467716
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3262,8 +3262,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.7595001, y: 0.9999999, z: 1}
-  m_Center: {x: 0.37974936, y: 0, z: 0}
+  m_Size: {x: 1.7595003, y: 0.9999999, z: 0.75538635}
+  m_Center: {x: 0.37974933, y: 0, z: -0.12230723}
 --- !u!4 &964467717
 Transform:
   m_ObjectHideFlags: 0
@@ -3272,7 +3272,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 964467714}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 111.07, y: 9.950001, z: -181.71}
+  m_LocalPosition: {x: 111.07, y: 9.950001, z: -183.5}
   m_LocalScale: {x: 1.5640115, y: 5.405667, z: 3.1719}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5199,6 +5199,12 @@ Transform:
   m_Father: {fileID: 47457990}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1657528576 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 234167056799387629, guid: 416bd1c885a1b27488c1382a18be7a29,
+    type: 3}
+  m_PrefabInstance: {fileID: 8863996028587808347}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1678069345
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5908,10 +5914,15 @@ PrefabInstance:
       propertyPath: gun
       value: 
       objectReference: {fileID: 504205084}
+    - target: {fileID: 4631915743802800182, guid: f41033d87c2643b46bd3ea34be7e4669,
+        type: 3}
+      propertyPath: interact
+      value: 
+      objectReference: {fileID: 1657528576}
     - target: {fileID: 5407713192805130930, guid: f41033d87c2643b46bd3ea34be7e4669,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5407713192805130930, guid: f41033d87c2643b46bd3ea34be7e4669,
         type: 3}
@@ -6624,6 +6635,12 @@ RectTransform:
   m_AnchoredPosition: {x: 55.75, y: 9.4}
   m_SizeDelta: {x: 1101, y: 554}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1952623914 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5260889918793342873, guid: 416bd1c885a1b27488c1382a18be7a29,
+    type: 3}
+  m_PrefabInstance: {fileID: 8863996028587808347}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1956883801
 GameObject:
   m_ObjectHideFlags: 0
@@ -6856,10 +6873,15 @@ PrefabInstance:
       propertyPath: gun
       value: 
       objectReference: {fileID: 504205084}
+    - target: {fileID: 4631915743802800182, guid: f41033d87c2643b46bd3ea34be7e4669,
+        type: 3}
+      propertyPath: interact
+      value: 
+      objectReference: {fileID: 1657528576}
     - target: {fileID: 5407713192805130930, guid: f41033d87c2643b46bd3ea34be7e4669,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5407713192805130930, guid: f41033d87c2643b46bd3ea34be7e4669,
         type: 3}
@@ -7065,12 +7087,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2048468862}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7fb8d81f08328a4290d18fdbe22054d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 1952623914}
 --- !u!65 &2048468865
 BoxCollider:
   m_ObjectHideFlags: 0

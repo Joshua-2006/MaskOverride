@@ -44,7 +44,7 @@ public class Gun : MonoBehaviour
             gun.canShoot = true;
         }
 
-        if (Input.GetKey(KeyCode.R) && reload && reserves > 0 && gm.ammo >= 0)
+        if (Input.GetKey(KeyCode.R) && reload && reserves > 0 && gm.ammo >= 0 && ammo <=20)
         { 
             gm.Reload(10);
             gm.UpdateReserves();
@@ -54,8 +54,8 @@ public class Gun : MonoBehaviour
         {
             reload = true;
         }
-            
-     }
+
+    }
     
    public void Fire()  
     {
