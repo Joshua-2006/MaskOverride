@@ -27333,7 +27333,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isXMoving: 1
   isXUsingSine: 0
-  xAmp: -11
+  xAmp: 8
   xPeriod: 5
   isYMoving: 0
   isYUsingSine: 0
