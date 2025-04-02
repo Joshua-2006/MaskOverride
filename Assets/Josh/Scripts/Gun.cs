@@ -12,6 +12,7 @@ public class Gun : MonoBehaviour
     public float ammo;
     public bool reload;
     public float reserves;
+    public GameObject reloads;
 
     // Start is called before the first frame update
     void Start()
@@ -54,7 +55,12 @@ public class Gun : MonoBehaviour
         {
             reload = true;
         }
-
+        if(reload)
+        {
+            reloads.SetActive(true);
+        }
+        if (reload == false)
+            reloads.SetActive(false);
     }
     
    public void Fire()  

@@ -15946,6 +15946,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1234202417}
     m_Modifications:
+    - target: {fileID: 2978495752580045655, guid: 416bd1c885a1b27488c1382a18be7a29,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7115788330455738954, guid: 416bd1c885a1b27488c1382a18be7a29,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8863996028607209808, guid: 416bd1c885a1b27488c1382a18be7a29,
         type: 3}
       propertyPath: m_Pivot.x
@@ -18794,6 +18804,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.4476602, y: 1.7428213, z: 7.023071}
   m_Center: {x: -0.013482165, y: -0.12858777, z: 2.511535}
+--- !u!1 &1467857646 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5260889918793342873, guid: 416bd1c885a1b27488c1382a18be7a29,
+    type: 3}
+  m_PrefabInstance: {fileID: 1212725797}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1468757977
 GameObject:
   m_ObjectHideFlags: 0
@@ -20944,6 +20960,7 @@ MonoBehaviour:
   ammo: 0
   reload: 0
   reserves: 0
+  reloads: {fileID: 0}
 --- !u!114 &1601756499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29511,6 +29528,7 @@ MonoBehaviour:
   ammo: 10
   reload: 0
   reserves: 0
+  reloads: {fileID: 1467857646}
 --- !u!54 &4743337065039503775
 Rigidbody:
   m_ObjectHideFlags: 0
