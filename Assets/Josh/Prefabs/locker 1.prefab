@@ -186,6 +186,26 @@ PrefabInstance:
       propertyPath: gun
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4341015591994046735, guid: ec50de2786816b44291c0464d4f57643,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 7.3645616
+      objectReference: {fileID: 0}
+    - target: {fileID: 4341015591994046735, guid: ec50de2786816b44291c0464d4f57643,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 2.185967
+      objectReference: {fileID: 0}
+    - target: {fileID: 4341015591994046735, guid: ec50de2786816b44291c0464d4f57643,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.08973738
+      objectReference: {fileID: 0}
+    - target: {fileID: 4341015591994046735, guid: ec50de2786816b44291c0464d4f57643,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0.09994474
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec50de2786816b44291c0464d4f57643, type: 3}
 --- !u!4 &5544586895166258263 stripped
