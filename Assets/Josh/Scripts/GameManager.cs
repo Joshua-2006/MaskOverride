@@ -6,7 +6,7 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public int ammo;
-    public int health;
+    public float health;
     public TextMeshProUGUI healthText;
     public TextMeshProUGUI ammoText;
     public TextMeshProUGUI reservesText;
@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     {
         
     }
-    public void UpdateHealth(int healthAmount)
+    public void UpdateHealth(float healthAmount)
     {
         health += healthAmount;
         healthText.text = $"Health: {health}";
