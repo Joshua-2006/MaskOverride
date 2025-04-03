@@ -3233,7 +3233,7 @@ GameObject:
   - component: {fileID: 964467715}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3245,7 +3245,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 964467714}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7fb8d81f08328a4290d18fdbe22054d, type: 3}
   m_Name: 
@@ -4470,7 +4470,7 @@ GameObject:
   - component: {fileID: 1400891832}
   m_Layer: 0
   m_Name: GameObject (1)
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4482,7 +4482,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1400891831}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7fb8d81f08328a4290d18fdbe22054d, type: 3}
   m_Name: 
@@ -7087,7 +7087,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2048468862}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7fb8d81f08328a4290d18fdbe22054d, type: 3}
   m_Name: 
@@ -7415,6 +7415,11 @@ PrefabInstance:
       propertyPath: gm
       value: 
       objectReference: {fileID: 1719681346}
+    - target: {fileID: 7805278439680865088, guid: 51c26a44ee94c154a992c8efaa476d28,
+        type: 3}
+      propertyPath: reloads
+      value: 
+      objectReference: {fileID: 1952623914}
     - target: {fileID: 7805278439873852832, guid: 51c26a44ee94c154a992c8efaa476d28,
         type: 3}
       propertyPath: m_IsActive
