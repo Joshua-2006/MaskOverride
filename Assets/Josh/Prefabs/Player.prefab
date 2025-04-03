@@ -279,6 +279,7 @@ MonoBehaviour:
   ammo: 10
   reload: 0
   reserves: 0
+  reloads: {fileID: 0}
 --- !u!1 &7805278439915893339
 GameObject:
   m_ObjectHideFlags: 0
@@ -724,7 +725,7 @@ Rigidbody:
   m_GameObject: {fileID: 7805278440461459771}
   serializedVersion: 2
   m_Mass: 2
-  m_Drag: 3.5
+  m_Drag: 3
   m_AngularDrag: 5
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -747,7 +748,7 @@ MonoBehaviour:
   vertical: 0
   rb: {fileID: 0}
   speed: 1
-  jumpForce: 15
+  jumpForce: 20
   drag: 0.99
   isGrounded: 0
   target: {fileID: 7805278439688775411}
@@ -757,6 +758,7 @@ MonoBehaviour:
   interactableLayer:
     serializedVersion: 2
     m_Bits: 4294967295
+  e: {fileID: 0}
   gm: {fileID: 0}
 --- !u!1 &7805278440530175884
 GameObject:
@@ -1270,6 +1272,7 @@ GameObject:
   - component: {fileID: 7805278441000781584}
   - component: {fileID: 7805278441000781591}
   - component: {fileID: 7805278441000781590}
+  - component: {fileID: 8659173708943609308}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1361,13 +1364,13 @@ MonoBehaviour:
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
   m_Cameras: []
-  m_RendererIndex: -1
+  m_RendererIndex: 0
   m_VolumeLayerMask:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -1391,6 +1394,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 7805278440461459764}
   mouseSensitivity: 2
+--- !u!114 &8659173708943609308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7805278441000781588}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 982e563a981923a4ca13c0c78f9635a1, type: 2}
 --- !u!1 &7805278441506833474
 GameObject:
   m_ObjectHideFlags: 0
