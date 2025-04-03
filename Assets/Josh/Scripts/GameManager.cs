@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     public void UpdateHealth(int healthAmount)
     {
         health += healthAmount;
+        healthText.text = $"Health: {health}";
     }
     public void Reload(int ammoAmount)
     {
