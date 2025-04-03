@@ -20,6 +20,7 @@ public class Movement : MonoBehaviour
     public bool isTurnedAround;
     public float raycastDistance = 10f;
     public LayerMask interactableLayer;
+    public GameObject e;
     [Header("Health")]
     public GameManager gm;
     
@@ -81,6 +82,20 @@ public class Movement : MonoBehaviour
         if (collision.gameObject.CompareTag("Grounded"))
         {
             isGrounded = true;
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Interactable"))
+        {
+            e.SetActive(true);
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.CompareTag("Interactable"))
+        {
+            e.SetActive(false);
         }
     }
 }
