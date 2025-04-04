@@ -4,33 +4,19 @@ using UnityEngine;
 
 public class Test : MonoBehaviour
 {
-    public Enemy target;
-    public Movement player;
-    public float range;
-    public float speed = 5;
-    public float setSpeed;
-    public bool isInRange;
-    // Start is called before the first frame update
-    void Start()
+    public Rigidbody rb;
+    public void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
-
-    // Update is called once per frame
-    void Update()
+    public void Update()
     {
-        var distance = Vector3.Distance(transform.position, player.transform.position);
-        if(distance < range)
-            isInRange = true;
-        
-        if(distance > range)
-            isInRange = false;
-        
-
-        if (isInRange == true)
-            speed = 5;
-        
-        else
-            speed = 0;
+        StartCoroutine(Fall());
+    }
+    IEnumerator Fall()
+    {
+        yield return new WaitForSeconds(3);
+        rb.isKinematic = false;
+        rb.mass = 10000000000000;
     }
 }

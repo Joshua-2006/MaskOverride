@@ -19,7 +19,7 @@ public class Ammo : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-       
+        interact.SetActive(true);
         
     }
     private void OnTriggerStay(Collider other)
@@ -29,12 +29,12 @@ public class Ammo : MonoBehaviour
             gun.reserves += 1;
             gm.UpdateReserves();
             gameObject.SetActive(false);
-            ;
+            
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        
-           
+
+        interact.SetActive(false);
     }
 }

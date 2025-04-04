@@ -54,12 +54,9 @@ public class Gun : MonoBehaviour
         if(reserves > 0)
         {
             reload = true;
-        }
-        if(reload)
-        {
             reloads.SetActive(true);
         }
-        if (reload == false)
+        if (reserves <= 0)
             reloads.SetActive(false);
     }
     
