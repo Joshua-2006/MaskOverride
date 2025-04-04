@@ -405,7 +405,7 @@ GameObject:
   - component: {fileID: 5935222511082847838}
   m_Layer: 0
   m_Name: Blue Platform
-  m_TagString: Untagged
+  m_TagString: Grounded
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -472,7 +472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  time: 3
+  time: 0.25
 --- !u!1 &6130295403577454952
 GameObject:
   m_ObjectHideFlags: 0
