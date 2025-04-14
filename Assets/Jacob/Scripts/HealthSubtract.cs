@@ -22,8 +22,8 @@ public class HealthSubtract : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            player.position = teleport.position;
             gm.UpdateHealth(-3);
+            player.position = teleport.position;
         }
     }
 }
