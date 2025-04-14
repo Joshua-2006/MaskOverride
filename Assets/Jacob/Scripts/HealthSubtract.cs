@@ -23,7 +23,16 @@ public class HealthSubtract : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             gm.UpdateHealth(-3);
-            player.position = teleport.position;
+           // 
+           if(CheckPointStorage.currentCheckPoint == null)
+            {
+                player.position = teleport.position;
+            }
+           else
+            {
+                player.position = CheckPointStorage.currentCheckPoint.position;
+
+            }
         }
     }
 }
