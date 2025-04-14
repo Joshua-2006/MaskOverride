@@ -472,7 +472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  time: 0.25
+  time: 0.2
 --- !u!1 &6130295403577454952
 GameObject:
   m_ObjectHideFlags: 0
