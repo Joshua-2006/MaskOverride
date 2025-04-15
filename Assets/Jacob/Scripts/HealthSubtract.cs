@@ -18,20 +18,19 @@ public class HealthSubtract : MonoBehaviour
     {
         
     }
-    private void OnCollisionEnter(Collision collision)
+
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
             gm.UpdateHealth(-3);
-           // 
-           if(CheckPointStorage.currentCheckPoint == null)
+            if (CheckPointStorage.currentCheckPoint == null)
             {
                 player.position = teleport.position;
             }
-           else
+            else
             {
                 player.position = CheckPointStorage.currentCheckPoint.position;
-
             }
         }
     }

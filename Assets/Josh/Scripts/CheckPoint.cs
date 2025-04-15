@@ -9,6 +9,7 @@ public class CheckPoint : MonoBehaviour
          if(other.gameObject.CompareTag("Player"))
         {
             CheckPointStorage.currentCheckPoint = transform;
+            gameObject.SetActive(false);
         }
     }
 }
