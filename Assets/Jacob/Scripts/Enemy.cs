@@ -22,7 +22,6 @@ public class Enemy : MonoBehaviour
         enemyRb = GetComponent<Rigidbody>();
         player = GameObject.Find("Player");
         gm = FindAnyObjectByType<GameManager>();
-        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -31,7 +30,6 @@ public class Enemy : MonoBehaviour
         enemyRb.AddForce((player.transform.position - transform.position).normalized * speed);
         if(health <= 0)
         {
-            anim.SetInteger("Anim Switcher", 1); 
             speed = 0;
             Destroy(gameObject);
         }
