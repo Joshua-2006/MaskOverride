@@ -84,6 +84,37 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &414154018760594557
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2187530371441949200}
+  m_Layer: 0
+  m_Name: Teleport
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2187530371441949200
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414154018760594557}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.04196167, y: 0.40000153, z: -12.519714}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8621209621396510450}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &646401248256258313
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,6 +460,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8621209621396510450}
   - component: {fileID: -8481646416249965001}
+  - component: {fileID: 5040440868305778381}
   m_Layer: 0
   m_Name: Green Platform
   m_TagString: Grounded
@@ -444,7 +476,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9002520650819341384}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 157.10944, y: 0.0000019073486, z: -93.63812}
+  m_LocalPosition: {x: 172.64, y: 32.92, z: -152.84}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -453,6 +485,7 @@ Transform:
   - {fileID: 4538304400659296544}
   - {fileID: 2214988466652383993}
   - {fileID: 3050745885504225694}
+  - {fileID: 2187530371441949200}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -469,3 +502,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 8.545212, y: 5.8018985, z: 9.746429}
   m_Center: {x: -0.018760681, y: 3.9775584, z: 0.01876831}
+--- !u!114 &5040440868305778381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9002520650819341384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1509d97a333199348b2bee6137c5bba0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teleport: {fileID: 2187530371441949200}
+  fall: {fileID: 0}
