@@ -13,7 +13,7 @@ public class Gun : MonoBehaviour
     public bool reload;
     public float reserves;
     public GameObject reloads;
-
+    public SadEnemy sad;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,13 +36,15 @@ public class Gun : MonoBehaviour
                 Fire();
             }
         }
-        if(gm.ammo < 0)
+        if(gm.ammo <= 0)
         {
             gun.canShoot = false;
+            sad.sad = false;
         }
-        else if(gm.ammo >0)
+        else if(gm.ammo > 0)
         {
             gun.canShoot = true;
+            sad.sad = true;
         }
 
         if (Input.GetKey(KeyCode.R) && reload && reserves > 0 && gm.ammo >= 0 && ammo <=20)

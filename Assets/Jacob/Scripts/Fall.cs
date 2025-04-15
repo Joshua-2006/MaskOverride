@@ -6,9 +6,12 @@ public class Fall : MonoBehaviour
 {
     public Rigidbody rb;
     public float time;
+    public float respawnDelay;
+    public Transform originalPosition;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        
     }
 
 
@@ -26,5 +29,9 @@ public class Fall : MonoBehaviour
         yield return new WaitForSeconds(time);
         rb.isKinematic = false;
         rb.mass = 1000;
+        yield return new WaitForSeconds(respawnDelay);
+        rb.isKinematic = true;
+        transform.position = originalPosition.position;
+        transform.rotation = originalPosition.rotation;
     }
 }
