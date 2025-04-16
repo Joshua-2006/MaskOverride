@@ -9,6 +9,9 @@ public class Pickup : MonoBehaviour
     public Movement player;
     public bool canShoot;
     public Pickup gun;
+    public Pickup gun2;
+    public Pickup Pistol;
+    public Pickup Rifle;
    
     
     // Start is called before the first frame update
@@ -39,13 +42,24 @@ public class Pickup : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if(canPickup && Input.GetButton("Interact"))
+        if(canPickup && Input.GetButton("Interact") && this.name == "Pistol")
         {
+            Rifle.gameObject.SetActive(true);
             gameObject.SetActive(false);
             gun.canShoot = true;
             gun.gameObject.SetActive(true);
+            gun2.gameObject.SetActive(false);
+            gun2.canShoot = false;
             
         }
-        
+        if (canPickup && Input.GetButton("Interact") && this.name == "Rifle")
+        {
+            Pistol.gameObject.SetActive(true);
+            gameObject.SetActive(false);
+            gun.canShoot = false;
+            gun.gameObject.SetActive(false);
+            gun2.canShoot = true;
+            gun2.gameObject.SetActive(true);
+        }
     }
 }
