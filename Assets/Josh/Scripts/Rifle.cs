@@ -20,7 +20,7 @@ public class Rifle : Gun
         }
         if (gun.canShoot && gm.gunAmmos > 0)
         {
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetButton("Fire1"))
             {
                 Fire();
             }
@@ -38,9 +38,9 @@ public class Rifle : Gun
             //sad.sad = true;
         }
 
-        if (Input.GetKey(KeyCode.R) && reload && reserves > 0 && gm.gunAmmos >= 0 && ammo < 20)
+        if (Input.GetKey(KeyCode.R) && reload && reserves > 0 && gm.gunAmmos >= 0)
         {
-            gm.Reloads(20);
+            gm.Reloads(200);
             gm.UpdateReserves2();
             reserves -= 1;
             reload = false;

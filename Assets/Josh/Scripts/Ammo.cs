@@ -25,11 +25,18 @@ public class Ammo : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-        if(Input.GetButton("Interact"))
+        if(Input.GetButton("Interact") && gun.name == "HandGun")
         {
             interact.SetActive(false);
             gun.reserves += 1;
             gm.UpdateReserves();
+            gameObject.SetActive(false);
+        }
+        if (Input.GetButton("Interact") && gun.name == "Gun")
+        {
+            interact.SetActive(false);
+            gun.reserves += 1;
+            gm.UpdateReserves2();
             gameObject.SetActive(false);
         }
     }
