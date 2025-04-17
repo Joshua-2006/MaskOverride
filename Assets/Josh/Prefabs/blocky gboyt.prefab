@@ -26,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1076275710778992817}
-  m_LocalRotation: {x: -0, y: -0.6884869, z: -0, w: 0.7252489}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.07, y: -1.96, z: 24.21}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 1
@@ -39,7 +39,7 @@ Transform:
   - {fileID: 6535695204454386563}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -87.021, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &406559417697088009
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -67,8 +67,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.7588267, y: 8.011232, z: 5.3576446}
-  m_Center: {x: -0.7720331, y: 6.1522083, z: 0.059599403}
+  m_Size: {x: 2.1962757, y: 5.9432096, z: 5.267729}
+  m_Center: {x: 0.014714241, y: 5.342982, z: 0.014641762}
 --- !u!114 &406559417697088014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82,8 +82,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  enemyRb: {fileID: 0}
+  player: {fileID: 0}
   explosionPower: 5
+  health: 0
   p: 0
+  gm: {fileID: 0}
+  isInRange: 0
+  range: 0
+  setSpeed: 0
+  anim: {fileID: 0}
 --- !u!1 &5031539540850483110
 GameObject:
   m_ObjectHideFlags: 0

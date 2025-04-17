@@ -2,81 +2,70 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gun : MonoBehaviour
+public class Rifle : Gun
 {
-    public GameObject bulletPrefab;
-    public Transform firePoint;
-    public float bulletSpeed = 20f;
-    public Pickup gun;
-    public GameManager gm;
-    public float ammo;
-    public bool reload;
-    public float reserves;
-    public GameObject reloads;
-    //public SadEnemy sad;
     // Start is called before the first frame update
-    protected virtual void Start()
+    protected override void Start()
     {
-        gm = FindAnyObjectByType<GameManager>();
-        
+        base.Start();
     }
 
     // Update is called once per frame
-    protected virtual void Update()
+    protected override void Update()
     {
-        gm.UpdateReserves();
-        if(reserves < 0)
+        gm.UpdateReserves2();
+        if (reserves < 0)
         {
             reserves = 0;
         }
-        if (gun.canShoot && gm.ammo > 0)
+        if (gun.canShoot && gm.gunAmmos > 0)
         {
             if (Input.GetButtonDown("Fire1"))
             {
                 Fire();
             }
         }
-        if(gm.ammo <= 0)
+        if (gm.gunAmmos <= 0)
         {
             gun.canShoot = false;
             //sad.sad = false;
-            
+
         }
-        else if(gm.ammo > 0)
+        else if (gm.gunAmmos > 0)
         {
             gun.canShoot = true;
-            
+
             //sad.sad = true;
         }
 
-        if (Input.GetKey(KeyCode.R) && reload && reserves > 0 && gm.ammo >= 0 && ammo < 20)
-        { 
-            gm.Reload(10);
-            gm.UpdateReserves();
+        if (Input.GetKey(KeyCode.R) && reload && reserves > 0 && gm.gunAmmos >= 0 && ammo < 20)
+        {
+            gm.Reloads(20);
+            gm.UpdateReserves2();
             reserves -= 1;
             reload = false;
-        }    
-        if(reserves > 0)
+        }
+        if (reserves > 0)
         {
             reload = true;
         }
-        if(reserves == 0)
+        if (reserves == 0)
         {
             reload = false;
-        }    
-        if(reload)
+        }
+        if (reload)
         {
             reloads.SetActive(true);
         }
         if (reload == false)
             reloads.SetActive(false);
     }
-    
-    protected virtual void Fire()  
+
+    protected override void Fire()
     {
-        gm.ammo -= 1;
+        gm.gunAmmos -= 1;
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        gm.UpdateAmmo();
+        gm.UpdateAmmo2();
 
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
         if (rb != null)
@@ -84,5 +73,4 @@ public class Gun : MonoBehaviour
             rb.velocity = firePoint.forward * bulletSpeed;
         }
     }
-
 }

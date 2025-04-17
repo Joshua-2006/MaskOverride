@@ -16,20 +16,21 @@ public class Ammo : MonoBehaviour
     public void Update()
     {
         gun = FindAnyObjectByType<Gun>();
+        interact = GameObject.Find("E");
     }
     private void OnTriggerEnter(Collider other)
     {
-       
+        interact.SetActive(true);
         
     }
     private void OnTriggerStay(Collider other)
     {
         if(Input.GetButton("Interact"))
         {
+            interact.SetActive(false);
             gun.reserves += 1;
             gm.UpdateReserves();
             gameObject.SetActive(false);
-            ;
         }
     }
     private void OnTriggerExit(Collider other)

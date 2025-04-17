@@ -6,11 +6,15 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public int ammo;
+    public int gunAmmos;
     public float health;
     public TextMeshProUGUI healthText;
     public TextMeshProUGUI ammoText;
+    public TextMeshProUGUI gunAmmo;
+    public TextMeshProUGUI gunReserves;
     public TextMeshProUGUI reservesText;
     public Gun gun;
+    public Gun rifle;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +25,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Reload(10);
+        //Reload(10); 
     }
     public void UpdateHealth(float healthAmount)
     {
@@ -33,13 +37,26 @@ public class GameManager : MonoBehaviour
         ammo += ammoAmount;
         ammoText.text = $"{ammo}";
     }
+    public void Reloads(int ammoAmount)
+    {
+        gunAmmos += ammoAmount;
+        gunAmmo.text = $"{gunAmmos}";
+    }
     public void UpdateAmmo()
     {
         ammoText.text = $"{ammo}";
     }
+    public void UpdateAmmo2()
+    {
+        gunAmmo.text = $"{gunAmmos}";
+    }
     public void UpdateReserves()
     {
         reservesText.text = $"{gun.reserves}";
+    }
+    public void UpdateReserves2()
+    {
+        gunReserves.text = $"{rifle.reserves}";
     }
     
 }
