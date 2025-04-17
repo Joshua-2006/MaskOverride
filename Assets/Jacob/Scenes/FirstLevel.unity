@@ -18344,6 +18344,12 @@ PrefabInstance:
       objectReference: {fileID: 1544140335}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51c26a44ee94c154a992c8efaa476d28, type: 3}
+--- !u!4 &1062752979 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7805278440461459764, guid: 51c26a44ee94c154a992c8efaa476d28,
+    type: 3}
+  m_PrefabInstance: {fileID: 1062752978}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1067739895
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21131,7 +21137,7 @@ GameObject:
   - component: {fileID: 1234202416}
   - component: {fileID: 1234202418}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: HealthSubtract
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21179,7 +21185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gm: {fileID: 1725947978}
   teleport: {fileID: 2060226164}
-  player: {fileID: 0}
+  player: {fileID: 1062752979}
 --- !u!1001 &1237490914
 PrefabInstance:
   m_ObjectHideFlags: 0
