@@ -18,24 +18,27 @@ public class Rifle : Gun
         {
             reserves = 0;
         }
-        if (gun.canShoot && gm.gunAmmos > 0)
+
+
+        //This code is dogwater
+   /*     if (gun.canShoot && gm.gunAmmos > 0)
         {
             if (Input.GetButton("Fire1"))
             {
-                Fire();
+                StartCoroutine(Wait());
             }
+        }*/
+
+        if(Input.GetButton("Fire1")&&gun.canShoot)
+        {
+            Fire();
         }
+
         if (gm.gunAmmos <= 0)
         {
             gun.canShoot = false;
             //sad.sad = false;
 
-        }
-        else if (gm.gunAmmos > 0)
-        {
-            gun.canShoot = true;
-
-            //sad.sad = true;
         }
 
         if (Input.GetKey(KeyCode.R) && reload && reserves > 0 && gm.gunAmmos >= 0)
@@ -63,6 +66,8 @@ public class Rifle : Gun
 
     protected override void Fire()
     {
+        gun.canShoot = false;
+        StartCoroutine(ResetGun());
         gm.gunAmmos -= 1;
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         gm.UpdateAmmo2();
@@ -72,5 +77,10 @@ public class Rifle : Gun
         {
             rb.velocity = firePoint.forward * bulletSpeed;
         }
+    }
+    IEnumerator ResetGun()
+    {
+        yield return new WaitForSeconds(gun.shootDelay);
+        gun.canShoot = true;
     }
 }
