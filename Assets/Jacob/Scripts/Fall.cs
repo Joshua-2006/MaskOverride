@@ -8,9 +8,11 @@ public class Fall : MonoBehaviour
     public float time;
     public float respawnDelay;
     public Transform originalPosition;
+    public AudioSource audioSource;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        audioSource = GetComponent<AudioSource>();
         
     }
 
@@ -21,6 +23,7 @@ public class Fall : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            audioSource.Play();
             StartCoroutine(Falling());
         }
     }
