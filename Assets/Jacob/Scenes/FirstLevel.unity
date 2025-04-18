@@ -5362,6 +5362,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 309838655}
   m_Mesh: {fileID: -1550514412580984892, guid: 3fcdd11f6944d83488c868ae8cebe95c, type: 3}
+--- !u!82 &310398485 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 9024902621808260359, guid: 24079a920ca8bd54fb2f98f44fc6bebb,
+    type: 3}
+  m_PrefabInstance: {fileID: 6818252733790092713}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &315583909 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a83fc9b07701e304087c31938e8193ac,
@@ -33005,6 +33011,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blue Platform
       objectReference: {fileID: 0}
+    - target: {fileID: 5935222511082847838, guid: 24079a920ca8bd54fb2f98f44fc6bebb,
+        type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 310398485}
     - target: {fileID: 5935222511082847838, guid: 24079a920ca8bd54fb2f98f44fc6bebb,
         type: 3}
       propertyPath: originalPosition
