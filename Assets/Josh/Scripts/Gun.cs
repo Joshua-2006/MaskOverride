@@ -37,13 +37,13 @@ public class Gun : MonoBehaviour
                 Fire();
             }
         }
-        if(gm.ammo <= 0)
+        if(gm.ammo <= 0 && sad != null)
         {
             gun.canShoot = false;
             sad.sad = false;
             
         }
-        else if(gm.ammo > 0)
+        else if(gm.ammo > 0 && sad != null)
         {
             gun.canShoot = true;
             
