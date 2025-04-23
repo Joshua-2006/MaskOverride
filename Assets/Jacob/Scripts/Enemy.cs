@@ -29,7 +29,9 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
    protected virtual void Update()
     {
+        Vector3 rotation = player.transform.position - transform.position;
         enemyRb.AddForce((player.transform.position - transform.position).normalized * speed);
+        Quaternion.LookRotation(rotation);
         if(health <= 0)
         {
             speed = 0;
