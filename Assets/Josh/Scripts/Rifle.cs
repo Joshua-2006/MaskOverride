@@ -13,6 +13,7 @@ public class Rifle : Gun
     // Update is called once per frame
     protected override void Update()
     {
+        sad = FindAnyObjectByType<SadEnemy>();        
         gm.UpdateReserves2();
         if (reserves < 0)
         {
@@ -29,16 +30,19 @@ public class Rifle : Gun
             }
         }*/
 
-        if(Input.GetButton("Fire1")&&gun.canShoot)
+        if(Input.GetButton("Fire1") && gun.canShoot && gm.gunAmmos > 0)
         {
             Fire();
         }
 
-        if (gm.gunAmmos <= 0)
+        if (gm.gunAmmos <= 0 && sad != null) 
         {
             gun.canShoot = false;
-            //sad.sad = false;
-
+            sad.sad = false;
+        }
+        if(gm.gunAmmos > 0 && sad != null)
+        {
+            sad.sad = false;
         }
 
         if (Input.GetKey(KeyCode.R) && reload && reserves > 0 && gm.gunAmmos >= 0)

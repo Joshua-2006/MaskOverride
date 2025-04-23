@@ -44,7 +44,7 @@ public class Movement : MonoBehaviour
             rb.mass = 50;
         if (isGrounded)
             rb.mass = 2;*/
-        if (gm.health <= 0)
+        if (gm.health.value <= 0)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }

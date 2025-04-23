@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public Slider health;
     public int ammo;
     public int gunAmmos;
-    public float health;
-    public TextMeshProUGUI healthText;
+    //public float health;
     public TextMeshProUGUI ammoText;
     public TextMeshProUGUI gunAmmo;
     public TextMeshProUGUI gunReserves;
@@ -28,8 +29,7 @@ public class GameManager : MonoBehaviour
     }
     public void UpdateHealth(float healthAmount)
     {
-        health += healthAmount;
-        healthText.text = $"Health: {health}";
+        health.value += healthAmount;
     }
     public void Reload(int ammoAmount)
     {
