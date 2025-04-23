@@ -13,29 +13,36 @@ public class Rifle : Gun
     // Update is called once per frame
     protected override void Update()
     {
+        sad = FindAnyObjectByType<SadEnemy>();        
         gm.UpdateReserves2();
         if (reserves < 0)
         {
             reserves = 0;
         }
-        if (gun.canShoot && gm.gunAmmos > 0)
+
+
+        //This code is dogwater
+   /*     if (gun.canShoot && gm.gunAmmos > 0)
         {
             if (Input.GetButton("Fire1"))
             {
-                Fire();
+                StartCoroutine(Wait());
             }
+        }*/
+
+        if(Input.GetButton("Fire1") && gun.canShoot && gm.gunAmmos > 0)
+        {
+            Fire();
         }
-        if (gm.gunAmmos <= 0)
+
+        if (gm.gunAmmos <= 0 && sad != null) 
         {
             gun.canShoot = false;
-            //sad.sad = false;
-
+            sad.sad = false;
         }
-        else if (gm.gunAmmos > 0)
+        if(gm.gunAmmos > 0 && sad != null)
         {
-            gun.canShoot = true;
-
-            //sad.sad = true;
+            sad.sad = false;
         }
 
         if (Input.GetKey(KeyCode.R) && reload && reserves > 0 && gm.gunAmmos >= 0)
@@ -63,6 +70,8 @@ public class Rifle : Gun
 
     protected override void Fire()
     {
+        gun.canShoot = false;
+        StartCoroutine(ResetGun());
         gm.gunAmmos -= 1;
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         gm.UpdateAmmo2();
@@ -72,5 +81,10 @@ public class Rifle : Gun
         {
             rb.velocity = firePoint.forward * bulletSpeed;
         }
+    }
+    IEnumerator ResetGun()
+    {
+        yield return new WaitForSeconds(gun.shootDelay);
+        gun.canShoot = true;
     }
 }
