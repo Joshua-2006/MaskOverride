@@ -19,12 +19,19 @@ public class SadEnemy : Enemy
         {
             enemyRb.AddForce(player.transform.forward * explosionPower, ForceMode.Impulse);
             gm.UpdateHealth(-0.5f);
-            if(sad)
+            StartCoroutine(Hit());
+            if (sad)
             gm.Reload(-1);
         }
         if (collision.gameObject.CompareTag("Bullet"))
         {
             health -= 1;
         }
+    }
+    IEnumerator Hit()
+    {
+        hit.SetActive(true);
+        yield return new WaitForSeconds(hitDelay);
+        hit.SetActive(false);
     }
 }

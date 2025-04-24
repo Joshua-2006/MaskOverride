@@ -15,6 +15,8 @@ public class Enemy : MonoBehaviour
     public float range;
     public float setSpeed;
     public Animator anim;
+    public GameObject hit;
+    public float hitDelay;
 
     // Start is called before the first frame update
     protected virtual void Start()
@@ -27,7 +29,9 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
    protected virtual void Update()
     {
+        Vector3 rotation = player.transform.position - transform.position;
         enemyRb.AddForce((player.transform.position - transform.position).normalized * speed);
+        Quaternion.LookRotation(rotation);
         if(health <= 0)
         {
             speed = 0;
@@ -58,6 +62,7 @@ public class Enemy : MonoBehaviour
         {
             enemyRb.AddForce(player.transform.forward * explosionPower, ForceMode.Impulse);
             gm.UpdateHealth(-1);
+            StartCoroutine(Hit());
         }
         if(collision.gameObject.CompareTag("Bullet"))
         {
@@ -65,5 +70,11 @@ public class Enemy : MonoBehaviour
         }
 
         
+    }
+    IEnumerator Hit()
+    {
+        hit.SetActive(true);
+        yield return new WaitForSeconds(hitDelay);
+        hit.SetActive(false);
     }
 }
