@@ -1205,7 +1205,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 217
-      value: 219
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a83fc9b07701e304087c31938e8193ac,
         type: 3}
@@ -1651,6 +1650,8 @@ MonoBehaviour:
   range: 0
   setSpeed: 0
   anim: {fileID: 0}
+  hit: {fileID: 0}
+  hitDelay: 0
 --- !u!54 &59075146
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3074,7 +3075,7 @@ PrefabInstance:
         type: 3}
       propertyPath: interact
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 298305993}
     - target: {fileID: 5407713192805130930, guid: f41033d87c2643b46bd3ea34be7e4669,
         type: 3}
       propertyPath: m_RootOrder
@@ -3192,6 +3193,8 @@ MonoBehaviour:
   range: 0
   setSpeed: 0
   anim: {fileID: 0}
+  hit: {fileID: 0}
+  hitDelay: 0
 --- !u!136 &144159743
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4067,6 +4070,8 @@ MonoBehaviour:
   range: 0
   setSpeed: 0
   anim: {fileID: 0}
+  hit: {fileID: 0}
+  hitDelay: 0
 --- !u!136 &188912592
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4630,6 +4635,8 @@ MonoBehaviour:
   range: 10
   setSpeed: 1
   anim: {fileID: 0}
+  hit: {fileID: 0}
+  hitDelay: 0
 --- !u!136 &212596878
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5193,6 +5200,8 @@ MonoBehaviour:
   range: 0
   setSpeed: 0
   anim: {fileID: 0}
+  hit: {fileID: 0}
+  hitDelay: 0
 --- !u!136 &232170822
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5745,7 +5754,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: a83fc9b07701e304087c31938e8193ac,
         type: 3}
       propertyPath: m_RootOrder
-      value: 218
+      value: 219
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a83fc9b07701e304087c31938e8193ac,
         type: 3}
@@ -6099,6 +6108,8 @@ MonoBehaviour:
   range: 0
   setSpeed: 0
   anim: {fileID: 0}
+  hit: {fileID: 0}
+  hitDelay: 0
 --- !u!136 &303399890
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7158,7 +7169,7 @@ PrefabInstance:
         type: 3}
       propertyPath: interact
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 298305993}
     - target: {fileID: 5407713192805130930, guid: f41033d87c2643b46bd3ea34be7e4669,
         type: 3}
       propertyPath: m_RootOrder
@@ -8794,6 +8805,8 @@ MonoBehaviour:
   range: 10
   setSpeed: 1
   anim: {fileID: 0}
+  hit: {fileID: 0}
+  hitDelay: 0
 --- !u!136 &456430835
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10124,6 +10137,8 @@ MonoBehaviour:
   range: 10
   setSpeed: 1
   anim: {fileID: 0}
+  hit: {fileID: 0}
+  hitDelay: 0
 --- !u!136 &523684244
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11063,6 +11078,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4131355109710387943, guid: 416bd1c885a1b27488c1382a18be7a29,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4131355109710387943, guid: 416bd1c885a1b27488c1382a18be7a29,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7584399330538766513, guid: 416bd1c885a1b27488c1382a18be7a29,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7584399330538766513, guid: 416bd1c885a1b27488c1382a18be7a29,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7584399330538766513, guid: 416bd1c885a1b27488c1382a18be7a29,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8863996028607209808, guid: 416bd1c885a1b27488c1382a18be7a29,
         type: 3}
       propertyPath: m_Pivot.x
@@ -12975,6 +13015,8 @@ MonoBehaviour:
   range: 10
   setSpeed: 1
   anim: {fileID: 0}
+  hit: {fileID: 0}
+  hitDelay: 0
 --- !u!136 &675898168
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -15133,6 +15175,8 @@ MonoBehaviour:
   range: 0
   setSpeed: 0
   anim: {fileID: 0}
+  hit: {fileID: 0}
+  hitDelay: 0
 --- !u!136 &819196691
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -16285,6 +16329,8 @@ MonoBehaviour:
   range: 10
   setSpeed: 1
   anim: {fileID: 0}
+  hit: {fileID: 0}
+  hitDelay: 0
 --- !u!136 &881546028
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -18526,7 +18572,7 @@ PrefabInstance:
         type: 3}
       propertyPath: interact
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 298305993}
     - target: {fileID: 5407713192805130930, guid: f41033d87c2643b46bd3ea34be7e4669,
         type: 3}
       propertyPath: m_RootOrder
@@ -20270,7 +20316,7 @@ PrefabInstance:
         type: 3}
       propertyPath: interact
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 298305993}
     - target: {fileID: 5407713192805130930, guid: f41033d87c2643b46bd3ea34be7e4669,
         type: 3}
       propertyPath: m_RootOrder
@@ -21906,6 +21952,8 @@ MonoBehaviour:
   range: 0
   setSpeed: 0
   anim: {fileID: 0}
+  hit: {fileID: 0}
+  hitDelay: 0
 --- !u!136 &1217477202
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -23537,6 +23585,8 @@ MonoBehaviour:
   range: 0
   setSpeed: 0
   anim: {fileID: 0}
+  hit: {fileID: 0}
+  hitDelay: 0
 --- !u!136 &1337061114
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -25969,6 +26019,8 @@ MonoBehaviour:
   range: 10
   setSpeed: 1
   anim: {fileID: 0}
+  hit: {fileID: 0}
+  hitDelay: 0
 --- !u!136 &1504270836
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -26806,6 +26858,8 @@ MonoBehaviour:
   range: 10
   setSpeed: 1
   anim: {fileID: 0}
+  hit: {fileID: 0}
+  hitDelay: 0
 --- !u!136 &1542617344
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -26945,6 +26999,8 @@ MonoBehaviour:
   range: 10
   setSpeed: 1
   anim: {fileID: 0}
+  hit: {fileID: 0}
+  hitDelay: 0
 --- !u!136 &1542789716
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -28368,6 +28424,8 @@ MonoBehaviour:
   range: 10
   setSpeed: 1
   anim: {fileID: 0}
+  hit: {fileID: 0}
+  hitDelay: 0
 --- !u!136 &1613265253
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -29965,6 +30023,8 @@ MonoBehaviour:
   range: 0
   setSpeed: 0
   anim: {fileID: 0}
+  hit: {fileID: 0}
+  hitDelay: 0
 --- !u!136 &1689771306
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -32090,6 +32150,11 @@ PrefabInstance:
       propertyPath: rifle
       value: 
       objectReference: {fileID: 986952434}
+    - target: {fileID: 731915037222933978, guid: 6b9fe38012451f8459000550ddb32129,
+        type: 3}
+      propertyPath: health
+      value: 
+      objectReference: {fileID: 2097702479}
     - target: {fileID: 731915037222933978, guid: 6b9fe38012451f8459000550ddb32129,
         type: 3}
       propertyPath: gunAmmo
@@ -34641,7 +34706,7 @@ PrefabInstance:
         type: 3}
       propertyPath: interact
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 298305993}
     - target: {fileID: 5407713192805130930, guid: f41033d87c2643b46bd3ea34be7e4669,
         type: 3}
       propertyPath: m_RootOrder
@@ -34929,7 +34994,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: a83fc9b07701e304087c31938e8193ac,
         type: 3}
       propertyPath: m_RootOrder
-      value: 217
+      value: 218
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a83fc9b07701e304087c31938e8193ac,
         type: 3}
@@ -35204,7 +35269,7 @@ PrefabInstance:
         type: 3}
       propertyPath: interact
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 298305993}
     - target: {fileID: 5407713192805130930, guid: f41033d87c2643b46bd3ea34be7e4669,
         type: 3}
       propertyPath: m_RootOrder
@@ -35297,7 +35362,7 @@ PrefabInstance:
         type: 3}
       propertyPath: interact
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 298305993}
     - target: {fileID: 5407713192805130930, guid: f41033d87c2643b46bd3ea34be7e4669,
         type: 3}
       propertyPath: m_RootOrder
@@ -35887,6 +35952,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a83fc9b07701e304087c31938e8193ac, type: 3}
+--- !u!114 &2097702479 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1921617641315538458, guid: 416bd1c885a1b27488c1382a18be7a29,
+    type: 3}
+  m_PrefabInstance: {fileID: 547148593}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2103737263
 GameObject:
   m_ObjectHideFlags: 0
@@ -35947,6 +36024,8 @@ MonoBehaviour:
   range: 10
   setSpeed: 1
   anim: {fileID: 0}
+  hit: {fileID: 0}
+  hitDelay: 0
 --- !u!136 &2103737266
 CapsuleCollider:
   m_ObjectHideFlags: 0
