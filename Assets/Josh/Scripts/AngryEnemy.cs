@@ -16,10 +16,17 @@ public class AngryEnemy : Enemy
         {
             enemyRb.AddForce(player.transform.forward * explosionPower, ForceMode.Impulse);
             gm.UpdateHealth(-2f);
+            StartCoroutine(Hit());
         }
         if (collision.gameObject.CompareTag("Bullet"))
         {
             health -= 2;
         }
+    }
+    IEnumerator Hit()
+    {
+        hit.SetActive(true);
+        yield return new WaitForSeconds(hitDelay);
+        hit.SetActive(false);
     }
 }
