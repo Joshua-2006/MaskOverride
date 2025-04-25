@@ -425,6 +425,8 @@ MonoBehaviour:
   range: 20
   setSpeed: 2
   anim: {fileID: 0}
+  hit: {fileID: 0}
+  hitDelay: 0
 --- !u!1 &6918557253288429216
 GameObject:
   m_ObjectHideFlags: 0

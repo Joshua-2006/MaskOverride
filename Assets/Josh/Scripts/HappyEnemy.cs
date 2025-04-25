@@ -8,6 +8,10 @@ public class HappyEnemy : Enemy
     {
         base.Update();
     }
+    protected override void FixedUpdate()
+    {
+        base.FixedUpdate();
+    }
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))

@@ -15,8 +15,11 @@ public class Enemy : MonoBehaviour
     public float range;
     public float setSpeed;
     public Animator anim;
+    public float animSetter;
     public GameObject hit;
     public float hitDelay;
+    public GameObject mask;
+    public GameObject rock;
 
     // Start is called before the first frame update
     protected virtual void Start()
@@ -29,31 +32,54 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
    protected virtual void Update()
     {
-        Vector3 rotation = player.transform.position - transform.position;
-        enemyRb.AddForce((player.transform.position - transform.position).normalized * speed);
-        Quaternion.LookRotation(rotation);
+        
         if(health <= 0)
         {
-            speed = 0;
-            Destroy(gameObject);
+            anim.SetInteger("AnimSetter", 1);
+            isInRange = false;
+            speed = 0f;
+            Destroy(mask);
+            enemyRb.mass = 1000000;
+            StartCoroutine(RockSpawn());
         }
 
         var distance = Vector3.Distance(transform.position, player.transform.position);
-        if (distance < range)
+        if (distance < range && health > 0)
         {
             isInRange = true;
         }
-        if (distance > range)
+        if (distance > range && health > 0)
         {
             isInRange = false;
         }
-        if (isInRange == true)
+        if (isInRange == true && health > 0)
         {
             speed = setSpeed;
+            anim.SetInteger("AnimSetter", 2);
+        }
+        else if(isInRange == false && health > 0)
+        {
+            speed = 0;
+            anim.SetInteger("AnimSetter", 0);
+        }
+        
+    }
+    protected virtual void FixedUpdate()
+    {
+        Vector3 move = (player.transform.position - transform.position).normalized;
+        if(isInRange)
+        {
+            Vector3 movement = move * speed;
+            enemyRb.velocity = new Vector3(movement.x,enemyRb.velocity.y, movement.z);
         }
         else
         {
-            speed = 0;
+            enemyRb.velocity = new Vector3(0, enemyRb.velocity.y, 0);
+        }
+        if (move != Vector3.zero)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(move);
+            enemyRb.rotation = Quaternion.Slerp(enemyRb.rotation, targetRotation, speed * Time.fixedDeltaTime);
         }
     }
     private void OnCollisionEnter(Collision collision)
@@ -76,5 +102,11 @@ public class Enemy : MonoBehaviour
         hit.SetActive(true);
         yield return new WaitForSeconds(hitDelay);
         hit.SetActive(false);
+    }
+    IEnumerator RockSpawn()
+    {
+        yield return new WaitForSeconds(.5f);
+        rock.SetActive(true);
+        Destroy(gameObject, 3);
     }
 }
