@@ -958,7 +958,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fa0b0097166d6944c8bc56b7467de4f1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bc9b5e6770fb5b845baaa042c06737dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1100,6 +1100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b1b278b488b1e7408170c3029c0bb1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyFinder: {fileID: 0}
   speed: 0
   enemyRb: {fileID: 0}
   player: {fileID: 0}

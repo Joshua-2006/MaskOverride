@@ -1274,6 +1274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a348cff44b7f004f8049a751680c6fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyFinder: {fileID: 0}
   speed: 0
   enemyRb: {fileID: 0}
   player: {fileID: 0}
@@ -1429,7 +1430,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5b13215a044a3644aad2a55c7cdfcec9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ce848487ecf2a354e9f575ccf1650209, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
