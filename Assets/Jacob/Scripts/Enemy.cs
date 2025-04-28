@@ -77,7 +77,7 @@ public class Enemy : MonoBehaviour
             enemyRb.rotation = Quaternion.Slerp(enemyRb.rotation, targetRotation, speed * Time.fixedDeltaTime);
         }
     }
-    private void OnCollisionEnter(Collision collision)
+    protected virtual void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.CompareTag("Player"))
         {

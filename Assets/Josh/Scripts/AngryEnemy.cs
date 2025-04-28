@@ -14,8 +14,9 @@ public class AngryEnemy : Enemy
     {
         base.FixedUpdate();
     }
-    private void OnCollisionEnter(Collision collision)
+    protected override void OnCollisionEnter(Collision collision)
     {
+        
         if (collision.gameObject.CompareTag("Player"))
         {
             enemyRb.AddForce(player.transform.forward * explosionPower, ForceMode.Impulse);
@@ -25,6 +26,15 @@ public class AngryEnemy : Enemy
         if (collision.gameObject.CompareTag("Bullet"))
         {
             health -= 2;
+            if (health <= 0)
+            {
+                anim.SetInteger("AnimSetter", 1);
+                isInRange = false;
+                speed = 0f;
+                Destroy(mask);
+                enemyRb.mass = 1000000;
+                StartCoroutine(RockSpawn());
+            }
         }
     }
     IEnumerator Hit()
@@ -32,5 +42,13 @@ public class AngryEnemy : Enemy
         hit.SetActive(true);
         yield return new WaitForSeconds(hitDelay);
         hit.SetActive(false);
+    }
+    IEnumerator RockSpawn()
+    {
+        yield return new WaitForSeconds(1.6f);
+        rock.SetActive(true);
+        enemyFinder.UpdateEnemies();
+        Destroy(gameObject, 2);
+
     }
 }
