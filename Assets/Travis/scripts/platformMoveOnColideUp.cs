@@ -6,6 +6,7 @@ public class platformMoveOnColideUp : MonoBehaviour
 {
     [SerializeField] private float speed = 0;
     [SerializeField] private float activatedSpeed = 10;
+    [SerializeField] private float stoppingY;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -26,7 +27,7 @@ public class platformMoveOnColideUp : MonoBehaviour
     private void Update()
     {
         transform.Translate(Vector3.up * Time.deltaTime * speed);
-        if (transform.position.y > 39.6)
+        if (transform.position.y > stoppingY)
         {
             activatedSpeed = 0;
             speed = activatedSpeed;

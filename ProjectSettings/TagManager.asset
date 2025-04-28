@@ -10,6 +10,8 @@ TagManager:
   - Wall
   - Collectible
   - Interactable
+  - pistol
+  - E
   layers:
   - Default
   - TransparentFX

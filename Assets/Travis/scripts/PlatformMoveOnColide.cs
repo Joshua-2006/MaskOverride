@@ -6,6 +6,7 @@ public class PlatformMoveOnColide : MonoBehaviour
 {
     [SerializeField] private float speed = 0;
     [SerializeField] private float activatedSpeed = 10;
+    [SerializeField] private float stoppingX;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -26,5 +27,10 @@ public class PlatformMoveOnColide : MonoBehaviour
     private void Update()
     {
         transform.Translate(Vector3.left * Time.deltaTime * speed);
+        if (transform.position.x < stoppingX)
+        {
+            activatedSpeed = 0;
+            speed = activatedSpeed;
+        }
     }
 }
