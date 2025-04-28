@@ -26,5 +26,10 @@ public class platformMoveOnColideUp : MonoBehaviour
     private void Update()
     {
         transform.Translate(Vector3.up * Time.deltaTime * speed);
+        if (transform.position.y > 39.6)
+        {
+            activatedSpeed = 0;
+            speed = activatedSpeed;
+        }
     }
 }
