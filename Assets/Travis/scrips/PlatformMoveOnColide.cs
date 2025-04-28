@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlatformMoveOnColide : MonoBehaviour
 {
     [SerializeField] private float speed = 0;
-    [SerializeField] private float activatedSpeed = 5;
+    [SerializeField] private float activatedSpeed = 10;
 
     private void OnCollisionEnter(Collision collision)
     {
