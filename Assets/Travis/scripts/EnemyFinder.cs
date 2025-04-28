@@ -5,12 +5,13 @@ using UnityEngine;
 public class EnemyFinder : MonoBehaviour
 {
     public int enemiesLeft;
-
+    public GameObject platform;
 
     // Start is called before the first frame update
     void Start()
     {
         enemiesLeft = GameObject.FindObjectsByType<Enemy>(0).Length;
+        platform.SetActive(false);
     }
 
     public void UpdateEnemies()
@@ -30,6 +31,6 @@ public class EnemyFinder : MonoBehaviour
 
     public void EnemiesAllGone()
     {
-        Debug.Log("you have killed them all");
+        platform.SetActive(true);
     }
 }

@@ -50,7 +50,7 @@ public class Gun : MonoBehaviour
             sad.sad = true;
         }
 
-        if (Input.GetKey(KeyCode.R) && reload && reserves > 0 && gm.ammo >= 0 && ammo < 20)
+        if (Input.GetKey(KeyCode.R) && reload && reserves > 0 && gm.ammo == 0 && ammo < 20)
         { 
             gm.Reload(10);
             gm.UpdateReserves();

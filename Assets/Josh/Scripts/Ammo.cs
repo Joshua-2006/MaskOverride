@@ -10,18 +10,12 @@ public class Ammo : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
-        gm = FindAnyObjectByType<GameManager>();
-        
-    }
-    public void Update()
-    {
         gun = FindAnyObjectByType<Gun>();
-        interact = GameObject.Find("E");
+        gm = FindAnyObjectByType<GameManager>();
     }
     private void OnTriggerEnter(Collider other)
     {
         interact.SetActive(true);
-        
     }
     private void OnTriggerStay(Collider other)
     {
