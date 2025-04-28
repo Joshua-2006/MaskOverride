@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public EnemyFinder enemyFinder;
+
     public float speed;
     public Rigidbody enemyRb;
     public GameObject player;
@@ -27,21 +29,14 @@ public class Enemy : MonoBehaviour
         enemyRb = GetComponent<Rigidbody>();
         player = GameObject.Find("Player");
         gm = FindAnyObjectByType<GameManager>();
+        enemyFinder = GameObject.Find("EnemyFinder").GetComponent<EnemyFinder>();
     }
 
     // Update is called once per frame
    protected virtual void Update()
     {
         
-        if(health <= 0)
-        {
-            anim.SetInteger("AnimSetter", 1);
-            isInRange = false;
-            speed = 0f;
-            Destroy(mask);
-            enemyRb.mass = 1000000;
-            StartCoroutine(RockSpawn());
-        }
+      
 
         var distance = Vector3.Distance(transform.position, player.transform.position);
         if (distance < range && health > 0)
@@ -93,6 +88,15 @@ public class Enemy : MonoBehaviour
         if(collision.gameObject.CompareTag("Bullet"))
         {
             health -= 3;
+            if (health <= 0)
+            {
+                anim.SetInteger("AnimSetter", 1);
+                isInRange = false;
+                speed = 0f;
+                Destroy(mask);
+                enemyRb.mass = 1000000;
+                StartCoroutine(RockSpawn());
+            }
         }
 
         
@@ -107,6 +111,8 @@ public class Enemy : MonoBehaviour
     {
         yield return new WaitForSeconds(1.6f);
         rock.SetActive(true);
+        enemyFinder.UpdateEnemies();
         Destroy(gameObject, 2);
+        
     }
 }
