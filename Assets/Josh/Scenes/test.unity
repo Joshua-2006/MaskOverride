@@ -1750,6 +1750,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1168706433398345449, guid: dba74f48ba002e342bef23290df884a8,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 1168706433398345451, guid: dba74f48ba002e342bef23290df884a8,
         type: 3}
       propertyPath: hit
@@ -2763,6 +2768,11 @@ PrefabInstance:
       propertyPath: hit
       value: 
       objectReference: {fileID: 1324073579}
+    - target: {fileID: 3977667071608106155, guid: 0fb14318bbfdde240910e53ca382447c,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 4319773315315680845, guid: 0fb14318bbfdde240910e53ca382447c,
         type: 3}
       propertyPath: m_Name
@@ -3587,6 +3597,11 @@ PrefabInstance:
       propertyPath: hit
       value: 
       objectReference: {fileID: 1324073579}
+    - target: {fileID: 7107996847271182884, guid: 31e3446966e81ef4c870a9e6b1447e99,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 7290786854349637399, guid: 31e3446966e81ef4c870a9e6b1447e99,
         type: 3}
       propertyPath: m_RootOrder
@@ -3726,6 +3741,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7295618349616645930, guid: 7106f06cc9a09ba4992e80cecbee14f9,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 7295618349616645931, guid: 7106f06cc9a09ba4992e80cecbee14f9,
         type: 3}
       propertyPath: hit
@@ -3791,6 +3811,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Neutral Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548996439197198576, guid: 9d268a2548e7f2c4aa3ea40f8697f47a,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 7548996439197198583, guid: 9d268a2548e7f2c4aa3ea40f8697f47a,
         type: 3}
