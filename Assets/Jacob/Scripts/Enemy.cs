@@ -105,8 +105,8 @@ public class Enemy : MonoBehaviour
     }
     IEnumerator RockSpawn()
     {
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(1.6f);
         rock.SetActive(true);
-        Destroy(gameObject, 3);
+        Destroy(gameObject, 2);
     }
 }
