@@ -22,6 +22,8 @@ public class Enemy : MonoBehaviour
     public float hitDelay;
     public GameObject mask;
     public GameObject rock;
+    public bool isGrounded;
+    public BoxCollider bc;
 
     // Start is called before the first frame update
     protected virtual void Start()
@@ -30,20 +32,18 @@ public class Enemy : MonoBehaviour
         player = GameObject.Find("Player");
         gm = FindAnyObjectByType<GameManager>();
         enemyFinder = GameObject.Find("EnemyFinder").GetComponent<EnemyFinder>();
+        bc = GetComponent<BoxCollider>();
     }
 
     // Update is called once per frame
    protected virtual void Update()
     {
-        
-      
-
         var distance = Vector3.Distance(transform.position, player.transform.position);
         if (distance < range && health > 0)
         {
             isInRange = true;
         }
-        if (distance > range && health > 0)
+        else if (distance > range && health > 0 || isGrounded == false)
         {
             isInRange = false;
         }
@@ -77,11 +77,16 @@ public class Enemy : MonoBehaviour
             enemyRb.rotation = Quaternion.Slerp(enemyRb.rotation, targetRotation, speed * Time.fixedDeltaTime);
         }
     }
+    
     protected virtual void OnCollisionEnter(Collision collision)
     {
+        if(collision.gameObject.CompareTag("Grounded"))
+        {
+            isGrounded = true;
+        }
         if(collision.gameObject.CompareTag("Player"))
         {
-            enemyRb.AddForce(player.transform.forward * explosionPower, ForceMode.Impulse);
+            StartCoroutine(GetBack());
             gm.UpdateHealth(-1);
             StartCoroutine(Hit());
         }
@@ -90,16 +95,22 @@ public class Enemy : MonoBehaviour
             health -= 3;
             if (health <= 0)
             {
+                bc.isTrigger = true;
                 anim.SetInteger("AnimSetter", 1);
                 isInRange = false;
                 speed = 0f;
                 Destroy(mask);
-                enemyRb.mass = 1000000;
-                StartCoroutine(RockSpawn());
             }
         }
 
-        
+    }
+    protected virtual void OnCollisionExit(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Grounded"))
+        {
+            isGrounded = false;
+            StartCoroutine(Fall());
+        }
     }
     IEnumerator Hit()
     {
@@ -107,12 +118,17 @@ public class Enemy : MonoBehaviour
         yield return new WaitForSeconds(hitDelay);
         hit.SetActive(false);
     }
-    IEnumerator RockSpawn()
+  
+    protected virtual IEnumerator GetBack()
     {
-        yield return new WaitForSeconds(1.6f);
-        rock.SetActive(true);
-        enemyFinder.UpdateEnemies();
-        Destroy(gameObject, 2);
-        
+        transform.Translate(player.transform.forward * explosionPower);
+        yield return new WaitForSeconds(0.5f);
+        transform.Translate(player.transform.forward * 0);
+    }
+    protected virtual IEnumerator Fall()
+    {
+        yield return new WaitForEndOfFrame();
+        /*transform.Translate(Vector3.down * explosionPower);
+        Destroy(gameObject, 1);*/
     }
 }

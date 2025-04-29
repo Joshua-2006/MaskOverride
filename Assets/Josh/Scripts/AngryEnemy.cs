@@ -14,12 +14,16 @@ public class AngryEnemy : Enemy
     {
         base.FixedUpdate();
     }
+    protected override void OnCollisionExit(Collision collision)
+    {
+        base.OnCollisionExit(collision);
+    }
     protected override void OnCollisionEnter(Collision collision)
     {
         
         if (collision.gameObject.CompareTag("Player"))
         {
-            enemyRb.AddForce(player.transform.forward * explosionPower, ForceMode.Impulse);
+            StartCoroutine(GetBack());
             gm.UpdateHealth(-2f);
             StartCoroutine(Hit());
         }
@@ -28,27 +32,24 @@ public class AngryEnemy : Enemy
             health -= 2;
             if (health <= 0)
             {
+                bc.isTrigger = true;
                 anim.SetInteger("AnimSetter", 1);
                 isInRange = false;
                 speed = 0f;
                 Destroy(mask);
-                enemyRb.mass = 1000000;
-                StartCoroutine(RockSpawn());
             }
         }
     }
+   
     IEnumerator Hit()
     {
         hit.SetActive(true);
         yield return new WaitForSeconds(hitDelay);
         hit.SetActive(false);
     }
-    IEnumerator RockSpawn()
+ 
+    protected override IEnumerator GetBack()
     {
-        yield return new WaitForSeconds(1.6f);
-        rock.SetActive(true);
-        enemyFinder.UpdateEnemies();
-        Destroy(gameObject, 2);
-
+        return base.GetBack();
     }
 }

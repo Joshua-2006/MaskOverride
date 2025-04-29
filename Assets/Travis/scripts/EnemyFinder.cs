@@ -10,7 +10,7 @@ public class EnemyFinder : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        enemiesLeft = GameObject.FindObjectsByType<Enemy>(0).Length;
+        enemiesLeft = GameObject.FindGameObjectsWithTag("zone1").Length;
         platform.SetActive(false);
     }
 
@@ -22,7 +22,7 @@ public class EnemyFinder : MonoBehaviour
     IEnumerator DelayedEnemyCount()
     {
         yield return new WaitForSeconds(2.1f);
-        enemiesLeft = GameObject.FindObjectsByType<Enemy>(0).Length;
+        enemiesLeft = GameObject.FindGameObjectsWithTag("zone1").Length;
         if (enemiesLeft <= 0)
         {
             EnemiesAllGone();

@@ -798,7 +798,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 84
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!65 &3977667071608106157
 BoxCollider:
@@ -863,6 +863,8 @@ MonoBehaviour:
   hitDelay: 0.3
   mask: {fileID: 3977667072666701166}
   rock: {fileID: 3977667072230732186}
+  isGrounded: 0
+  bc: {fileID: 0}
 --- !u!1 &4801324814454190991
 GameObject:
   m_ObjectHideFlags: 0
