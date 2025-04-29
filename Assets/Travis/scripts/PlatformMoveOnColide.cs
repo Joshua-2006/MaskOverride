@@ -31,6 +31,7 @@ public class PlatformMoveOnColide : MonoBehaviour
         {
             activatedSpeed = 0;
             speed = activatedSpeed;
+            
         }
     }
 }

@@ -12,6 +12,7 @@ TagManager:
   - Interactable
   - pistol
   - E
+  - zone1
   layers:
   - Default
   - TransparentFX

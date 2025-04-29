@@ -56,6 +56,7 @@ public class Gun : MonoBehaviour
             gm.UpdateReserves();
             reserves -= 1;
             reload = false;
+            reloads.SetActive(false);
         }    
         if(reserves > 0)
         {
@@ -65,11 +66,11 @@ public class Gun : MonoBehaviour
         {
             reload = false;
         }    
-        if(reload)
+        if(reload && gm.ammo == 0)
         {
             reloads.SetActive(true);
         }
-        if (reload == false)
+        if (reload == false && gm.ammo > 0)
             reloads.SetActive(false);
     }
     
