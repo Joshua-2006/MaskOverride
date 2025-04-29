@@ -29,11 +29,13 @@ public class HappyEnemy : Enemy
             health -= 1;
             if (health <= 0)
             {
+                ac.PlayOneShot(ap);
                 bc.isTrigger = true;
                 anim.SetInteger("AnimSetter", 1);
                 isInRange = false;
                 speed = 0f;
                 Destroy(mask);
+                Destroy(gameObject, 1);
             }
         }
     }

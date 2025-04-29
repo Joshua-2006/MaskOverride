@@ -25,6 +25,7 @@ public class Enemy : MonoBehaviour
     public bool isGrounded;
     public BoxCollider bc;
     public AudioSource ac;
+    public AudioClip ap;
 
     // Start is called before the first frame update
     protected virtual void Start()
@@ -34,6 +35,7 @@ public class Enemy : MonoBehaviour
         gm = FindAnyObjectByType<GameManager>();
         enemyFinder = GameObject.Find("EnemyFinder").GetComponent<EnemyFinder>();
         bc = GetComponent<BoxCollider>();
+        ac = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -96,11 +98,13 @@ public class Enemy : MonoBehaviour
             health -= 3;
             if (health <= 0)
             {
+                ac.PlayOneShot(ap);
                 bc.isTrigger = true;
                 anim.SetInteger("AnimSetter", 1);
                 isInRange = false;
                 speed = 0f;
                 Destroy(mask);
+                Destroy(gameObject, 1);
             }
         }
 
