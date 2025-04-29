@@ -1796,16 +1796,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1168706433398345449, guid: dba74f48ba002e342bef23290df884a8,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1168706433398345449, guid: dba74f48ba002e342bef23290df884a8,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 80
-      objectReference: {fileID: 0}
     - target: {fileID: 1168706433398345451, guid: dba74f48ba002e342bef23290df884a8,
         type: 3}
       propertyPath: hit
@@ -2819,20 +2809,10 @@ PrefabInstance:
       propertyPath: hit
       value: 
       objectReference: {fileID: 1324073579}
-    - target: {fileID: 3977667071608106155, guid: 0fb14318bbfdde240910e53ca382447c,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 80
-      objectReference: {fileID: 0}
     - target: {fileID: 4319773315315680845, guid: 0fb14318bbfdde240910e53ca382447c,
         type: 3}
       propertyPath: m_Name
       value: Angry Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 4319773315315680845, guid: 0fb14318bbfdde240910e53ca382447c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fb14318bbfdde240910e53ca382447c, type: 3}
@@ -3648,26 +3628,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3732983609555213677, guid: 31e3446966e81ef4c870a9e6b1447e99,
-        type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7107996847271182883, guid: 31e3446966e81ef4c870a9e6b1447e99,
         type: 3}
       propertyPath: hit
       value: 
       objectReference: {fileID: 1324073579}
-    - target: {fileID: 7107996847271182884, guid: 31e3446966e81ef4c870a9e6b1447e99,
-        type: 3}
-      propertyPath: m_Mass
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7107996847271182884, guid: 31e3446966e81ef4c870a9e6b1447e99,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 80
-      objectReference: {fileID: 0}
     - target: {fileID: 7290786854349637399, guid: 31e3446966e81ef4c870a9e6b1447e99,
         type: 3}
       propertyPath: m_RootOrder
@@ -3752,11 +3717,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3771108922436269697, guid: 7106f06cc9a09ba4992e80cecbee14f9,
-        type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7112739900656676091, guid: 7106f06cc9a09ba4992e80cecbee14f9,
         type: 3}
       propertyPath: m_RootOrder
@@ -3812,16 +3772,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7295618349616645930, guid: 7106f06cc9a09ba4992e80cecbee14f9,
-        type: 3}
-      propertyPath: m_Mass
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 7295618349616645930, guid: 7106f06cc9a09ba4992e80cecbee14f9,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 80
-      objectReference: {fileID: 0}
     - target: {fileID: 7295618349616645931, guid: 7106f06cc9a09ba4992e80cecbee14f9,
         type: 3}
       propertyPath: hit
@@ -3831,11 +3781,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Happy Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 7637638696385328705, guid: 7106f06cc9a09ba4992e80cecbee14f9,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7106f06cc9a09ba4992e80cecbee14f9, type: 3}
@@ -3888,56 +3833,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4155126915451821715, guid: 9d268a2548e7f2c4aa3ea40f8697f47a,
-        type: 3}
-      propertyPath: m_UpdateMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4155126915451821715, guid: 9d268a2548e7f2c4aa3ea40f8697f47a,
-        type: 3}
-      propertyPath: m_CullingMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4155126915451821715, guid: 9d268a2548e7f2c4aa3ea40f8697f47a,
-        type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7206328479173189203, guid: 9d268a2548e7f2c4aa3ea40f8697f47a,
         type: 3}
       propertyPath: m_Name
       value: Neutral Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 7548996439197198576, guid: 9d268a2548e7f2c4aa3ea40f8697f47a,
-        type: 3}
-      propertyPath: m_Mass
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 7548996439197198576, guid: 9d268a2548e7f2c4aa3ea40f8697f47a,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 7548996439197198576, guid: 9d268a2548e7f2c4aa3ea40f8697f47a,
-        type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7548996439197198583, guid: 9d268a2548e7f2c4aa3ea40f8697f47a,
         type: 3}
       propertyPath: hit
       value: 
       objectReference: {fileID: 1324073579}
-    - target: {fileID: 7548996439197198583, guid: 9d268a2548e7f2c4aa3ea40f8697f47a,
-        type: 3}
-      propertyPath: setSpeed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7548996439197198583, guid: 9d268a2548e7f2c4aa3ea40f8697f47a,
-        type: 3}
-      propertyPath: explosionPower
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8019175076816897257, guid: 9d268a2548e7f2c4aa3ea40f8697f47a,
         type: 3}
       propertyPath: m_RootOrder
