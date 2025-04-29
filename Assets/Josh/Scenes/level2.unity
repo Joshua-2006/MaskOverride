@@ -5493,6 +5493,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Neutral Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 7548996439197198576, guid: 9d268a2548e7f2c4aa3ea40f8697f47a,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 84
+      objectReference: {fileID: 0}
     - target: {fileID: 7548996439197198583, guid: 9d268a2548e7f2c4aa3ea40f8697f47a,
         type: 3}
       propertyPath: hit
@@ -5955,6 +5960,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Neutral Enemy (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7548996439197198576, guid: 9d268a2548e7f2c4aa3ea40f8697f47a,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 84
+      objectReference: {fileID: 0}
     - target: {fileID: 7548996439197198583, guid: 9d268a2548e7f2c4aa3ea40f8697f47a,
         type: 3}
       propertyPath: hit
@@ -6033,6 +6043,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Neutral Enemy (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7548996439197198576, guid: 9d268a2548e7f2c4aa3ea40f8697f47a,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 84
       objectReference: {fileID: 0}
     - target: {fileID: 7548996439197198583, guid: 9d268a2548e7f2c4aa3ea40f8697f47a,
         type: 3}

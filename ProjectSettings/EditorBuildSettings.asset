@@ -18,9 +18,12 @@ EditorBuildSettings:
     path: Assets/Josh/Scenes/hub.unity
     guid: 6f40502c0120edc49a927b894ffb40fe
   - enabled: 1
-    path: Assets/Jacob/Scenes/FirstLevel.unity
+    path: Assets/jacob/Scenes/FirstLevel.unity
     guid: f242be5f29e754540bc7584cf8865eec
   - enabled: 1
     path: Assets/Josh/Scenes/level2.unity
     guid: c0ce730602aa688488567603a610cff2
+  - enabled: 1
+    path: Assets/Josh/Scenes/credits.unity
+    guid: 8b0d9657f5888164fb74a78ec0a919ba
   m_configObjects: {}
