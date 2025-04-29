@@ -29,6 +29,7 @@ public class HappyEnemy : Enemy
             health -= 1;
             if (health <= 0)
             {
+                enemyFinder.UpdateEnemies();
                 ac.PlayOneShot(ap);
                 bc.isTrigger = true;
                 anim.SetInteger("AnimSetter", 1);

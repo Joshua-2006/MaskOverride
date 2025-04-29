@@ -98,6 +98,7 @@ public class Enemy : MonoBehaviour
             health -= 3;
             if (health <= 0)
             {
+                enemyFinder.UpdateEnemies();
                 ac.PlayOneShot(ap);
                 bc.isTrigger = true;
                 anim.SetInteger("AnimSetter", 1);
