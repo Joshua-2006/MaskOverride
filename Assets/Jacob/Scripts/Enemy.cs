@@ -24,6 +24,7 @@ public class Enemy : MonoBehaviour
     public GameObject rock;
     public bool isGrounded;
     public BoxCollider bc;
+    public AudioSource ac;
 
     // Start is called before the first frame update
     protected virtual void Start()
