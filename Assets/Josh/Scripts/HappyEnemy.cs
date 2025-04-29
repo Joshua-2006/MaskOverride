@@ -12,11 +12,15 @@ public class HappyEnemy : Enemy
     {
         base.FixedUpdate();
     }
-    private void OnCollisionEnter(Collision collision)
+    protected override void OnCollisionExit(Collision collision)
+    {
+        base.OnCollisionExit(collision);
+    }
+    protected override void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            enemyRb.AddForce(player.transform.forward * explosionPower, ForceMode.Impulse);
+            StartCoroutine(GetBack());
             gm.UpdateHealth(-1f);
             StartCoroutine(Hit());
         }
@@ -25,12 +29,11 @@ public class HappyEnemy : Enemy
             health -= 1;
             if (health <= 0)
             {
+                bc.isTrigger = true;
                 anim.SetInteger("AnimSetter", 1);
                 isInRange = false;
                 speed = 0f;
                 Destroy(mask);
-                enemyRb.mass = 1000000;
-                StartCoroutine(RockSpawn());
             }
         }
     }
@@ -40,12 +43,9 @@ public class HappyEnemy : Enemy
         yield return new WaitForSeconds(hitDelay);
         hit.SetActive(false);
     }
-    IEnumerator RockSpawn()
+  
+    protected override IEnumerator GetBack()
     {
-        yield return new WaitForSeconds(1.6f);
-        rock.SetActive(true);
-        enemyFinder.UpdateEnemies();
-        Destroy(gameObject, 2);
-
+        return base.GetBack();
     }
 }
