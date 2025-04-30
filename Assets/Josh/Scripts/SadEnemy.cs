@@ -39,7 +39,7 @@ public class SadEnemy : Enemy
             health -= 1;
             if (health <= 0)
             {
-                enemyFinder.UpdateEnemies();
+                
                 ac.PlayOneShot(ap);
                 bc.isTrigger = true;
                 anim.SetInteger("AnimSetter", 1);
@@ -47,6 +47,7 @@ public class SadEnemy : Enemy
                 speed = 0f;
                 Destroy(mask);
                 Destroy(gameObject, 1);
+                enemyFinder.UpdateEnemies();
             }
         }
     }
