@@ -5,8 +5,11 @@ using UnityEngine;
 public class SadEnemy : Enemy
 {
     public bool sad;
-    
 
+    protected override void Start()
+    {
+        base.Start();
+    }
     // Update is called once per frame
     protected override void Update()
     {

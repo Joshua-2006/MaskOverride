@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class AngryEnemy : Enemy
 {
-
+    protected override void Start()
+    {
+        base.Start();
+    }
     // Update is called once per frame
     protected override void Update()
     {

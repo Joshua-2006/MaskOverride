@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class HappyEnemy : Enemy
 {
+    protected override void Start()
+    {
+        base.Start();
+    }
     protected override void Update()
     {
         base.Update();

@@ -98,7 +98,6 @@ public class Enemy : MonoBehaviour
             health -= 3;
             if (health <= 0)
             {
-                enemyFinder.UpdateEnemies();
                 ac.PlayOneShot(ap);
                 bc.isTrigger = true;
                 anim.SetInteger("AnimSetter", 1);
@@ -106,6 +105,7 @@ public class Enemy : MonoBehaviour
                 speed = 0f;
                 Destroy(mask);
                 Destroy(gameObject, 1);
+                enemyFinder.UpdateEnemies();
             }
         }
 

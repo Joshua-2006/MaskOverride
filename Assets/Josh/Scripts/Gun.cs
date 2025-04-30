@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Gun : MonoBehaviour
 {
@@ -14,11 +15,13 @@ public class Gun : MonoBehaviour
     public float reserves;
     public GameObject reloads;
     public SadEnemy sad;
+    public AudioSource audios;
+    public AudioClip shoot;
     // Start is called before the first frame update
     protected virtual void Start()
     {
         gm = FindAnyObjectByType<GameManager>();
-        
+        audios = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -72,10 +75,15 @@ public class Gun : MonoBehaviour
         }
         if (reload == false && gm.ammo > 0)
             reloads.SetActive(false);
+        /*if(SceneManager.GetActiveScene().name == "FirstLevel" && reload && gm.ammo == 0)
+        {
+            reloads.SetActive(true);
+        }*/
     }
     
     protected virtual void Fire()  
     {
+        audios.PlayOneShot(shoot);
         gm.ammo -= 1;
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         gm.UpdateAmmo();

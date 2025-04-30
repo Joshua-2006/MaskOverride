@@ -23,6 +23,13 @@ public class Movement : MonoBehaviour
     public GameObject e;
     [Header("Health")]
     public GameManager gm;
+    [Header("Audio")]
+    public AudioSource audios;
+    public AudioClip jump;
+    public AudioClip walk;
+    public AudioClip death;
+    public bool isWalking;
+
     
     
     // Start is called before the first frame update
@@ -30,6 +37,7 @@ public class Movement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         gm = FindAnyObjectByType<GameManager>();
+        audios = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -37,6 +45,7 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
+            audios.PlayOneShot(jump);
             rb.AddRelativeForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isGrounded = false;
         }
@@ -46,7 +55,7 @@ public class Movement : MonoBehaviour
             rb.mass = 2;*/
         if (gm.health.value <= 0)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            StartCoroutine(Death());
         }
         Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
         RaycastHit hit;
@@ -66,6 +75,8 @@ public class Movement : MonoBehaviour
             }
 
         }
+        
+        
     }
 
     private void FixedUpdate()
@@ -75,7 +86,7 @@ public class Movement : MonoBehaviour
         
         rb.AddRelativeForce(Vector3.right * horizontal * speed * drag, ForceMode.Impulse);
         rb.AddRelativeForce(Vector3.forward * vertical * speed * drag, ForceMode.Impulse);
-        
+       
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -97,5 +108,11 @@ public class Movement : MonoBehaviour
         {
             e.SetActive(false);
         }
+    }
+    IEnumerator Death()
+    {
+        audios.PlayOneShot(death);
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

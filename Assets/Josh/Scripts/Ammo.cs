@@ -17,6 +17,7 @@ public class Ammo : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        gun = FindAnyObjectByType<Gun>();
         interact.gameObject.SetActive(true);
     }
     private void OnTriggerStay(Collider other)
