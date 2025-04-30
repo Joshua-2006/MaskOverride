@@ -70,6 +70,7 @@ public class Rifle : Gun
 
     protected override void Fire()
     {
+        audios.PlayOneShot(shoot);
         gun.canShoot = false;
         StartCoroutine(ResetGun());
         gm.gunAmmos -= 1;
