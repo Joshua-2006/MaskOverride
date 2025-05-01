@@ -45,7 +45,7 @@ public class Rifle : Gun
             sad.sad = false;
         }
 
-        if (Input.GetKey(KeyCode.R) && reload && reserves > 0 && gm.gunAmmos >= 0)
+        if (Input.GetKey(KeyCode.R) && reload && reserves > 0 && gm.gunAmmos == 0 && ammo < 200)
         {
             gm.Reloads(200);
             gm.UpdateReserves2();
