@@ -523,7 +523,7 @@ PrefabInstance:
     - target: {fileID: 1968405381254191277, guid: 7c42503a1355cbc4f9bcf9ed89cd3ab5,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1697935753597483748, guid: 7c42503a1355cbc4f9bcf9ed89cd3ab5, type: 3}
@@ -1172,7 +1172,7 @@ PrefabInstance:
     - target: {fileID: 1968405381254191277, guid: 7c42503a1355cbc4f9bcf9ed89cd3ab5,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1697935753597483748, guid: 7c42503a1355cbc4f9bcf9ed89cd3ab5, type: 3}
@@ -1374,7 +1374,7 @@ PrefabInstance:
     - target: {fileID: 7805278440461459764, guid: 51c26a44ee94c154a992c8efaa476d28,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7805278440461459764, guid: 51c26a44ee94c154a992c8efaa476d28,
         type: 3}
@@ -1757,7 +1757,7 @@ PrefabInstance:
     - target: {fileID: 7290786854349637399, guid: 31e3446966e81ef4c870a9e6b1447e99,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7290786854349637399, guid: 31e3446966e81ef4c870a9e6b1447e99,
         type: 3}
@@ -3064,7 +3064,7 @@ PrefabInstance:
     - target: {fileID: 9002520650819341384, guid: a195cd3005209ca4b8b3ab8d76d31bd2,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a195cd3005209ca4b8b3ab8d76d31bd2, type: 3}
@@ -4031,7 +4031,7 @@ PrefabInstance:
     - target: {fileID: 7491336725381073619, guid: 17f9d85caaf263c488872504551f1662,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7491336725381073619, guid: 17f9d85caaf263c488872504551f1662,
         type: 3}
@@ -4115,7 +4115,7 @@ PrefabInstance:
     - target: {fileID: 7290786854349637399, guid: 31e3446966e81ef4c870a9e6b1447e99,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7290786854349637399, guid: 31e3446966e81ef4c870a9e6b1447e99,
         type: 3}
@@ -4501,7 +4501,7 @@ PrefabInstance:
     - target: {fileID: 731915037222933979, guid: 6b9fe38012451f8459000550ddb32129,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 731915037222933979, guid: 6b9fe38012451f8459000550ddb32129,
         type: 3}
@@ -5302,7 +5302,7 @@ PrefabInstance:
     - target: {fileID: 1968405381254191277, guid: 7c42503a1355cbc4f9bcf9ed89cd3ab5,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1697935753597483748, guid: 7c42503a1355cbc4f9bcf9ed89cd3ab5, type: 3}
@@ -5871,7 +5871,7 @@ PrefabInstance:
     - target: {fileID: 8863996028607209808, guid: 416bd1c885a1b27488c1382a18be7a29,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8863996028607209808, guid: 416bd1c885a1b27488c1382a18be7a29,
         type: 3}
@@ -6212,7 +6212,7 @@ PrefabInstance:
     - target: {fileID: 9002520650819341384, guid: a195cd3005209ca4b8b3ab8d76d31bd2,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a195cd3005209ca4b8b3ab8d76d31bd2, type: 3}
@@ -6232,11 +6232,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: ac8df6f3c2835b243bd0c957e91c17af, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

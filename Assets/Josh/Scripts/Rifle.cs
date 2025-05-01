@@ -51,6 +51,7 @@ public class Rifle : Gun
             gm.UpdateReserves2();
             reserves -= 1;
             reload = false;
+            reloads.SetActive(false);
         }
         if (reserves > 0)
         {
@@ -60,11 +61,11 @@ public class Rifle : Gun
         {
             reload = false;
         }
-        if (reload)
+        if (reload && gm.gunAmmos == 0)
         {
             reloads.SetActive(true);
         }
-        if (reload == false)
+        if (reload == false && gm.gunAmmos > 0)
             reloads.SetActive(false);
     }
 
