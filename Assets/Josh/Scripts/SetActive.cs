@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class SetActive : MonoBehaviour
 {
-    public GameObject target;
+    public Gun target;
+    public Gun target2;
+    public ParticleSystem ps;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,16 +20,26 @@ public class SetActive : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") && target != null && target2 != null && target2.isActiveAndEnabled)
         {
-            target.SetActive(true);
+            target.gameObject.SetActive(true);
+            target2.gameObject.SetActive(false);
+        }
+        else if(other.gameObject.CompareTag("Player") && target != null && target2 != null && target.isActiveAndEnabled)
+        {
+            target2.gameObject.SetActive(true);
+            target.gameObject.SetActive(false);
+        }
+        if(other.gameObject.CompareTag("Player") && ps != null)
+        {
+            ps.Play();
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        if(other.gameObject.CompareTag("Player"))
+        if(other.gameObject.CompareTag("Player") && ps != null)
         {
-            target.SetActive(false);
+            ps.Stop();
         }
     }
 }
