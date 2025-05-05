@@ -865,8 +865,8 @@ MonoBehaviour:
   mask: {fileID: 3977667072666701166}
   rock: {fileID: 3977667072230732186}
   isGrounded: 0
-  bc: {fileID: 0}
-  ac: {fileID: 0}
+  bc: {fileID: 3977667071608106157}
+  ac: {fileID: 5423617583290406220}
   ap: {fileID: 8300000, guid: a2ad9906bc488e842a96cdc4ac77e205, type: 3}
 --- !u!82 &5423617583290406220
 AudioSource:

@@ -27,7 +27,7 @@ public class platformMoveDown : MonoBehaviour
     private void Update()
     {
         transform.Translate(Vector3.up * Time.deltaTime * speed);
-        if (transform.position.y > stoppingY)
+        if (transform.position.y < stoppingY)
         {
             activatedSpeed = 0;
             speed = activatedSpeed;

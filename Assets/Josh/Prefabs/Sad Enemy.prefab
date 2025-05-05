@@ -1154,8 +1154,8 @@ MonoBehaviour:
   mask: {fileID: 7107996849109529371}
   rock: {fileID: 7107996848949378753}
   isGrounded: 0
-  bc: {fileID: 0}
-  ac: {fileID: 0}
+  bc: {fileID: 7107996847271182887}
+  ac: {fileID: 4031241520399874910}
   ap: {fileID: 8300000, guid: a2ad9906bc488e842a96cdc4ac77e205, type: 3}
   sad: 0
 --- !u!82 &4031241520399874910
