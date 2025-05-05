@@ -6,7 +6,6 @@ public class Pickup : MonoBehaviour
 {
     public bool canPickup;
     public float shootDelay;
-    public GameObject attach;
     public Movement player;
     public bool canShoot;
     public Pickup gun;

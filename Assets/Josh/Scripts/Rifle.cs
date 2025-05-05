@@ -45,12 +45,14 @@ public class Rifle : Gun
             sad.sad = false;
         }
 
-        if (Input.GetKey(KeyCode.R) && reload && reserves > 0 && gm.gunAmmos >= 0)
+        if (Input.GetKey(KeyCode.R) && reload && reserves > 0 && gm.gunAmmos <= 0)
         {
             gm.Reloads(200);
             gm.UpdateReserves2();
             reserves -= 1;
             reload = false;
+            reloads.SetActive(false);
+            gun.canShoot = true;
         }
         if (reserves > 0)
         {
@@ -60,16 +62,17 @@ public class Rifle : Gun
         {
             reload = false;
         }
-        if (reload)
+        if (reload && gm.gunAmmos == 0)
         {
             reloads.SetActive(true);
         }
-        if (reload == false)
+        if (reload == false && gm.gunAmmos > 0)
             reloads.SetActive(false);
     }
 
     protected override void Fire()
     {
+        audios.PlayOneShot(shoot);
         gun.canShoot = false;
         StartCoroutine(ResetGun());
         gm.gunAmmos -= 1;
