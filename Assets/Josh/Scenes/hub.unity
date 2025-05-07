@@ -1024,6 +1024,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1949103476726077841, guid: 51c26a44ee94c154a992c8efaa476d28,
+        type: 3}
+      propertyPath: shootDelay
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 2657713588033659901, guid: 51c26a44ee94c154a992c8efaa476d28,
         type: 3}
       propertyPath: m_Volume
@@ -2183,7 +2188,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canPickup: 0
   shootDelay: 0
-  attach: {fileID: 0}
   player: {fileID: 482505924}
   canShoot: 0
   gun: {fileID: 482505925}
